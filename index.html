@@ -5,42 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="scss/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&display=swap" rel="stylesheet">
     <title>Instituto Tatu</title>
 </head>
 <body>
-    <header>
-        <header class="encabezado"><!--AbreHeader--> 
-            <a class="navbar-brand" href="index.html"> <!--logo-->
-                <img id="logo" src="assets/logo.png" alt="logo">
-            </a>        
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>  
-            <nav class="navbar navbar-expand-lg navbar-light bg-light"><!--menuNavegacion-->
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
+    <header class="encabezado"><!--AbreHeader--> 
+        <a class="navbar-brand" href="index.html"> <!--logo-->
+            <img id="logo" src="assets/logo.png" alt="logo">
+        </a>        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>  
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"><!--menuNavegacion-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="pages/staff.html">staff</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active"aria-current="page" href="pages/materias.html">Materias</a>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active"aria-current="page" href="pages/materias.html">Materias</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>   
+            </div>
+        </nav>   
     </header>
-    <section>
-        <h1>Bienvenidos al  Instituto Tatu</h1>
-        <h3>Un lugar en dónde te vamos a ayudar y apoyar en la materia que lo necesites</h3>
-            </section>
+    <section class="section1">
+        <div>
+            <img>
+            <div class="bienvenidos">
+                <h1>Bienvenidos</h1>
+                <p>Un lugar en dónde te vamos a ayudar y apoyar en la materia que lo necesites.
+                </p>
+                <button class="btn"><a href="#empecemos">Empecemos</a></button>
+            </div>
+            <img>
+        </div>
+        
+    </section>
+    <section class="section2" ><a name="empecemos">
+        <h3>¿Cómo me inscribo?</h3>
+    </a>
+    <div class="inscripcion">
+        <div>
+            <img>
+            <button> <h4>Ingresá tus datos.</h4></button>
+        </div>
+        <div>
+            <img>
+            <button><h4>Elegí la materia y tu profe.</h4></button>
+        </div>
+        <div>
+            <img>
+            <button><h4>Elegí el horario.</h4></button>
+        </div>
+    </div>
+    </section>
+    <section class= "section3"></section>
     <script  src = "main.js"></script>
 </body>
 </html>

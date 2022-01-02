@@ -1,4 +1,4 @@
-let nombre = prompt ("¿Cómo te llamás?");
+/*let nombre = prompt ("¿Cómo te llamás?");
 let padres = prompt("¿Cómo se llaman tus padres?");
 let edad = parseInt( prompt("¿Cuántos años tenés?"));
 let nombreEscuela = prompt ("¿A qué escuela vas?");
@@ -12,6 +12,6 @@ console.log(arrayAlumnos);
 let contenedor = document.createElement("div");//defino el innerHTML del elemento con una plantilla de texto
 contenedor.innerHTML = `<b>  Bienvenida/o: ${nombre}</b>
                         <p> Ahora te presentaremos a tus profes</p>`;
-document.body.appendChild(contenedor);
+document.body.appendChild(contenedor);*/
     
        

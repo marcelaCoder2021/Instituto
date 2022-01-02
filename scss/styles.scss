@@ -5,10 +5,8 @@
 }
 
 //*variables
-$FontColor: #1A7564;//colorBase
-$Font-face:'Open Sans', sans-serif; //fuente
-$h1-color:blueviolet;
-$h1-font-family: Verdana, Geneva, Tahoma, sans-serif;
+$h1FontFamily:'Arima Madurai', cursive;//fuente
+$fontColor: black;
 
 .encabezado{//header
     height: 4rem;
@@ -30,11 +28,10 @@ $h1-font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     .navbar-light {
         .navbar-toggler {
-            color:$FontColor; /*usoVariables*/
-            border-color:$FontColor;
+            color:$fontColor;
         }
         .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
-            color: $FontColor;
+            color: $fontColor;
             font-size: 16px;
         }
     }
@@ -54,16 +51,37 @@ $h1-font-family: Verdana, Geneva, Tahoma, sans-serif;
 //cierraHeader
 
 
-//estilos home
+//estilosSection1
+.section1{
+    background-color:#89D1D9;
+    .bienvenidos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            color:#BF0A3A;
+            font-family: $h1FontFamily;
+        }
+        .btn{
+            height: 30px;
+            width: 150 px;
+            a{
+                text-decoration: none;
+            }
 
-h1{
-    color: $h1-color;
-    font-family: $h1-font-family;
-    background:wheat;
-    text-align: center;
+        }
+    }
 }
-h3{
-    color: $h1-color;
+.section2{
+    h3{
+        text-align: center;
+    }
+    .inscripcion{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
 
 }
 
