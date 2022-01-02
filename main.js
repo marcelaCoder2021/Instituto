@@ -1,26 +1,17 @@
-class Alumnos {
-    constructor(nombre, padres, edad, nombreEscuela, anioEscolar, materia) {
-        this.nombre = nombre;
-        this.padres = padres;
-        this.edad = edad;
-        this.nombreEscuela = nombreEscuela;
-        this.anioEscolar = anioEscolar;
-        this.materia = materia;
-    }
-}
-function listadoAlumnos (){
-    let nombre = prompt ("¿Cómo te llamás?");
-    let padres = prompt("¿Cómo se llaman tus padres?");
-    let edad = parseInt( prompt("¿Cuántos años tenés?"));
-    let nombreEscuela = prompt ("¿A qué escuela vas?");
-    let anioEscolar =parseInt(prompt("¿En qué grado estás?"));
-    let materia = prompt ("¿En qué materia necesitas apoyo?");
-    const alumno = new Alumnos (nombre, padres, edad, nombreEscuela, anioEscolar, materia);
-    console.log (alumno);
-    return alumno;
-}
-listadoAlumnos ();
+let nombre = prompt ("¿Cómo te llamás?");
+let padres = prompt("¿Cómo se llaman tus padres?");
+let edad = parseInt( prompt("¿Cuántos años tenés?"));
+let nombreEscuela = prompt ("¿A qué escuela vas?");
+let anioEscolar =parseInt(prompt("¿En qué grado estás?"));
+let materia = prompt ("¿En qué materia necesitas apoyo?");
+const arrayAlumnos = [nombre, padres, edad, nombreEscuela, anioEscolar, materia];
 
-const arrayAlumnos = [];
-    arrayAlumnos.push (new Alumnos (this.nombre, this.padres, this.edad, this.nombreEscuela, this.anioEscolar, this.materia));
-    console.log (arrayAlumnos);
+console.log(arrayAlumnos.length);
+console.log(arrayAlumnos);
+    
+let contenedor = document.createElement("div");//defino el innerHTML del elemento con una plantilla de texto
+contenedor.innerHTML = `<b>  Bienvenida/o: ${nombre}</b>
+                        <p> Ahora te presentaremos a tus profes</p>`;
+document.body.appendChild(contenedor);
+    
+       
