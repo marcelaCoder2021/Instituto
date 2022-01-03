@@ -77,11 +77,32 @@ $fontColor: black;
         text-align: center;
     }
     .inscripcion{
+        padding:3px;
         display: flex;
         justify-content: space-around;
+        h4{
+            padding: 4px;
+        }
+        
     }
-
-
-
+    .inscribite{
+        display: flex;
+        justify-content: center;
+        button{
+            height: 30px;  
+            width: 150px;
+            border-radius: 6px;
+            align-self: center;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
 }
+
+    
+
+
+
+
 

@@ -13,5 +13,12 @@ let contenedor = document.createElement("div");//defino el innerHTML del element
 contenedor.innerHTML = `<b>  Bienvenida/o: ${nombre}</b>
                         <p> Ahora te presentaremos a tus profes</p>`;
 document.body.appendChild(contenedor);*/
+
+
+let button = document.getElementById("btnInscripcion");
+button.onclick = () =>{alert("Feliz comienzo")};
+
+
+
     
        
