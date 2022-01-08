@@ -73,17 +73,16 @@ $fontColor: black;
     }
 }
 .section2{
+    background: #F288D6;
     h3{
         text-align: center;
     }
     .inscripcion{
         padding:3px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
-        h4{
-            padding: 4px;
-        }
-        
+   
     }
     .inscribite{
         display: flex;

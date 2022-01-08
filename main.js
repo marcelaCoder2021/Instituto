@@ -18,7 +18,19 @@ document.body.appendChild(contenedor);*/
 let button = document.getElementById("btnInscripcion");
 button.onclick = () =>{alert("Feliz comienzo")};
 
+console.log (document.querySelectorAll(".postIt h4")); //muestro por consola los h4 con class postIt, se ve como un array
+let postIt = document.querySelectorAll (".postIt h4");
+console.log ((postIt.innerHTML));  
+postIt.forEach(element => {
+    console.log (element.innerHTML); //muestro por consola el contenido de cada h4 de mi clase "PostIt"
+    }
+);
+let nuevoPostIt = document.createElement("h4"); //creo nuevo h4
+nuevoPostIt.setAttribute("id","postIt"); //le pongo id
+nuevoPostIt.innerHTML="Y listo"; // le agrego texto
+console.log (nuevoPostIt); //por consola lo agregado, esta como string
+console.log(nuevoPostIt.innerHTML); //muestro por consola el nuevo contenido
+document.getElementById("postIt").appendChild(nuevoPostIt); //agrego al HTML
+nuevoPostIt.style.background ="blue"; //le agrego color
 
-
-    
-       
+ 

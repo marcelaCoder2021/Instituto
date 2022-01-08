@@ -66,16 +66,17 @@
   text-decoration: none;
 }
 
+.section2 {
+  background: #F288D6;
+}
 .section2 h3 {
   text-align: center;
 }
 .section2 .inscripcion {
   padding: 3px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-}
-.section2 .inscripcion h4 {
-  padding: 4px;
 }
 .section2 .inscribite {
   display: flex;
