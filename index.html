@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="scss/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--agrego fuentes-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
     <title>Instituto Tatu</title>
 </head>
 <body>
@@ -39,15 +39,16 @@
             </div>
         </nav>   
     </header>
-    <section class="section1">
-        <div>
-            <img>
+    <section>
+        <div class="section1"> 
+            
             <div class="bienvenidos">
                 <h1>Bienvenidos</h1>
                 <p>Un lugar en dónde te vamos a ayudar y apoyar en la materia que lo necesites.
                 </p>
                 <button class="btn"><a href="#empecemos">Empecemos</a></button>
             </div>
+            <img src="assets/introd.svg" alt="ImagenInicio">
             <img>
         </div>
     </section>
@@ -77,7 +78,84 @@
             <button id="btnInscripcion"><a  href="#empecemos"> Inscribite ahora</a></button>
         </div>
     </section>
-    <section class= "section3"></section>
+    <section class= "section3">
+        <div class="formularioInscripcion">
+            <form id="formulario">
+                <div class="datos">
+                    <h3>Ingresá tu nombre</h3>
+                    <input type="text" id="nombre" placeholder="Ingresá tu nombre">
+                    <small></small><!--para mandar mensaje de error-->
+                </div>
+                <div class="datos">
+                    <h3>Ingresá el nombre de tus padres</h3>
+                    <input type="text" id="nombrePadres" placeholder="Ingresá el nombre de tus padres">
+                    <small></small><!--para mandar mensaje de error-->
+                </div>
+                <div class="datos">
+                    <h3>Ingresá tu email</h3>
+                    <input type="email" id="email" placeholder="Ingresá tu email">
+                    <small></small><!--para mandar mensaje de error-->
+                </div>
+                <div class="datos"> 
+                    <h3>Ingresá tu celu</h3>
+                    <input type="phone" id="phone" placeholder="Ingresá tu celu">
+                    <small></small><!--para mandar mensaje de error-->
+                </div>
+                <div class="datos">
+                    <h3>A qué escuela vas?</h3>
+                    <input type="text" id="escuela" placeholder="A qué escuela vas?">
+                    <small></small><!--para mandar mensaje de error-->
+                </div>
+                <div class="datos">
+                    <h3>En qué grado/año estás?</h3>
+                    <input type="text" id="grado" placeholder="En qué grado/año estás?">
+                </div>
+                <div class="datos"> 
+                    <h3>En qué materia necesitás apoyo?</h3>
+                    <select id="materia"> <!--drop down eleccion materias-->
+                        <option value="0" id="eleccion">Elegí la materia</option>
+                        <option value="1" id="matematica">Matemática</option>
+                        <option value="2" id="lengua">Lengua</option>
+                        <option value="3" id="historia">Historia</option>
+                        <option value="4" id="geografia">Geografía</option>
+                        <option value="5" id="ingreso">Ingreso secundario</option>
+                    </select>
+                </div> 
+                <div id="segunMateria">  <!-- de acuerdo a la materia elegida -->
+                    <div id="elegi"></div>
+                    <div class="datos" id="profesorMatematica">
+                        <select>  <!--drop down eleccion profesor-->
+                            <option value="gu">Guido</option>
+                            <option value="ni">Nicole</option>
+                        </select>
+                    </div>
+                    <div class="datos" id="profesorLengua">
+                        <select><!--drop down eleccion profesor-->
+                            <option value="lu">Lucas</option>
+                            <option value="st">Stefi</option>
+                        </select>
+                    </div>
+                    <div class="datos" id="profesorHistoria">
+                        <button>Gastón</button>
+                    </div>
+                    <div class="datos" id="profesorGeografia">
+                        <button>Luciana</button>
+                    </div>
+                    <div class="datos" id="profesorIngreso">
+                        <select><!--drop down eleccion profesor-->
+                        <option value="ta">Tatu</option>
+                        <option value="me">Melu</option>
+                        <option value="ja">Javi</option>
+                        <option value="sh">Shirly</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="datos">
+                    <button type="submit" id="btn">Enviar</button>
+                </div>    
+            </form>
+        </div>
+    </section>
     <script  src = "main.js"></script>
 </body>
 </html>

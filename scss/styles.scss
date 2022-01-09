@@ -5,7 +5,7 @@
 }
 
 //*variables
-$h1FontFamily:'Arima Madurai', cursive;//fuente
+$h1FontFamily:'Ultra', serif;//fuente
 $fontColor: black;
 
 .encabezado{//header
@@ -54,6 +54,7 @@ $fontColor: black;
 //estilosSection1
 .section1{
     background-color:#89D1D9;
+    display: flex;
     .bienvenidos{
         display: flex;
         flex-direction: column;
