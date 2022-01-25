@@ -7,7 +7,7 @@
 .encabezado {
   height: 4rem;
   width: 100%;
-  background-color: #FFD687;
+  background-color: #F288D6;
   display: flex;
   justify-content: space-between;
   position: -webkit-sticky;
@@ -47,34 +47,66 @@
 }
 
 .section1 {
-  background-color: #89D1D9;
+  background: rgba(254, 181, 0, 0.1);
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 10vh 5vw;
 }
-.section1 .bienvenidos {
+.section1 #bienvenidos {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.section1 .bienvenidos h1 {
-  color: #BF0A3A;
+.section1 #bienvenidos h1 {
+  color: #FEB500;
   font-family: "Ultra", serif;
+  font-weight: 400;
+  font-size: 3.5vw;
+  letter-spacing: 3px;
+  padding-bottom: 7.5vh;
 }
-.section1 .bienvenidos .btn {
-  height: 30px;
-  width: 150 px;
+.section1 #bienvenidos p {
+  font-size: 1.3vw;
+  font-family: "Noto sans";
+  font-style: normal;
+  line-height: 30px;
+  text-align: left;
+  padding-bottom: 12vh;
 }
-.section1 .bienvenidos .btn a {
+.section1 #bienvenidos .btn {
+  height: 5.3vh;
+  width: 12vw;
+  border-radius: 25.5px;
+  background-color: #FEB500;
+}
+.section1 #bienvenidos .btn a {
   text-decoration: none;
+  font-family: "Noto sans";
+  font-size: 1.2em;
+  color: black;
+}
+.section1 img {
+  max-width: 50vw;
+  height: auto;
 }
 
 .section2 {
-  background: #F288D6;
+  background: rgba(254, 181, 0, 0.1);
 }
 .section2 h3 {
   text-align: center;
+  font-family: "Ultra", serif;
+  letter-spacing: 3px;
+  color: #FEB500;
+  font-size: 3.5vw;
+  font-weight: 400;
+  line-height: 55px;
+  text-align: center;
 }
 .section2 .inscripcion {
-  padding: 3px;
+  padding: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -84,11 +116,199 @@
   justify-content: center;
 }
 .section2 .inscribite button {
-  height: 30px;
-  width: 150px;
-  border-radius: 6px;
+  height: 5.3vh;
+  width: 12vw;
+  border-radius: 25.5px;
+  background-color: #FEB500;
   align-self: center;
 }
 .section2 .inscribite button a {
   text-decoration: none;
+  font-family: "Noto sans";
+  font-size: 1.2em;
+  color: black;
+}
+
+.section3 {
+  background: rgba(254, 181, 0, 0.1);
+  padding: 10vh 5vw;
+}
+.section3 #aprendamos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.section3 #aprendamos img {
+  max-width: 30vw;
+  height: auto;
+  padding-left: 8vw;
+}
+.section3 #aprendamos #aprendiendo h3 {
+  color: #FEB500;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-size: 3.2vw;
+  letter-spacing: 3px;
+  padding-bottom: 7.5vh;
+  text-align: center;
+}
+.section3 #aprendamos #aprendiendo p {
+  font-size: 1.3vw;
+  font-family: "Noto sans";
+  font-style: normal;
+  line-height: 30px;
+  text-align: left;
+  padding-bottom: 12vh;
+}
+.section3 #aprendamos #aprendiendo #button {
+  display: flex;
+  justify-content: center;
+}
+.section3 #aprendamos #aprendiendo #button button {
+  height: 5.3vh;
+  width: 12vw;
+  border-radius: 25.5px;
+  background-color: #FEB500;
+  align-self: center;
+}
+.section3 #aprendamos #aprendiendo #button button a {
+  text-decoration: none;
+  font-family: "Noto sans";
+  font-size: 1.2em;
+  color: black;
+}
+
+.section4 {
+  background: #feb5001a;
+  padding: 10vh 5vw;
+}
+.section4 h3 {
+  color: #FEB500;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-size: 3.2vw;
+  letter-spacing: 3px;
+  padding-bottom: 7.5vh;
+  text-align: center;
+}
+.section4 .clases {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.section4 .clases .niveles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section4 .clases .niveles h4 {
+  color: #FEB500;
+  font-family: "Ultra", serif;
+  font-weight: 100;
+  font-size: 1.8vw;
+}
+.section4 .inscribite {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+}
+.section4 .inscribite button {
+  height: 5.3vh;
+  width: 12vw;
+  border-radius: 25.5px;
+  background-color: #FEB500;
+  align-self: center;
+}
+.section4 .inscribite button a {
+  text-decoration: none;
+  font-family: "Noto sans";
+  font-size: 1.2em;
+  color: black;
+}
+
+.section5 {
+  background: #feb5001a;
+  padding: 10vh 5vw;
+}
+.section5 #equipo1 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.section5 #equipo1 #profes h3 {
+  color: #FEB500;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-size: 3.2vw;
+  letter-spacing: 3px;
+  padding-bottom: 7.5vh;
+  text-align: center;
+}
+.section5 #equipo1 #profes p {
+  font-size: 1.3vw;
+  font-family: "Noto sans";
+  font-style: normal;
+  line-height: 30px;
+  text-align: left;
+  padding-bottom: 12vh;
+}
+.section5 #equipo1 #profes #button {
+  display: flex;
+  justify-content: center;
+}
+.section5 #equipo1 #profes #button button {
+  height: 5.3vh;
+  width: 12vw;
+  border-radius: 25.5px;
+  background-color: #FEB500;
+  align-self: center;
+}
+.section5 #equipo1 #profes #button button a {
+  text-decoration: none;
+  font-family: "Noto sans";
+  font-size: 1.2em;
+  color: black;
+}
+.section5 #equipo1 #equipoImagen {
+  padding-right: 8vw;
+  width: 55%;
+  height: auto;
+}
+.section5 #especialistas {
+  display: flex;
+  flex-direction: column;
+}
+.section5 #especialistas h3 {
+  color: #FEB500;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-size: 3.2vw;
+  letter-spacing: 3px;
+  padding-bottom: 7.5vh;
+  padding-top: 7.5vh;
+  text-align: center;
+}
+.section5 #especialistas #profesEspecialistas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.section5 #especialistas #profesEspecialistas #cardProfes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section5 #especialistas #profesEspecialistas #cardProfes h4 {
+  color: #FEB500;
+  font-family: "Ultra", serif;
+  font-weight: 100;
+  font-size: 1.8vw;
+  padding-top: 5vh;
+  text-align: center;
+}
+.section5 #especialistas #profesEspecialistas #cardProfes p {
+  font-size: 15px;
+  width: 249px;
+  font-family: "Noto sans";
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */

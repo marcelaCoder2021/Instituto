@@ -1,8 +1,8 @@
 
-let button = document.getElementById("btnInscripcion");
+let button = document.getElementById("btnInscripcion"); //evento onclick
 button.onclick = () =>{alert("Feliz comienzo")};
-
-console.log (document.querySelectorAll(".postIt h4")); //muestro por consola los h4 con class postIt, se ve como un array
+//*************ESTO FUE PARA UN DESAFIO*********************
+/*console.log (document.querySelectorAll(".postIt h4")); //muestro por consola los h4 con class postIt, se ve como un array
 let postIt = document.querySelectorAll (".postIt h4");
 console.log ((postIt.innerHTML));  
 postIt.forEach(element => {
@@ -15,7 +15,7 @@ nuevoPostIt.innerHTML="Y listo"; // le agrego texto
 console.log (nuevoPostIt); //por consola lo agregado, esta como string
 console.log(nuevoPostIt.innerHTML); //muestro por consola el nuevo contenido
 document.getElementById("postIt").appendChild(nuevoPostIt); //agrego al HTML
-nuevoPostIt.style.background ="blue"; //le agrego color
+nuevoPostIt.style.background ="blue"; //le agrego color*/
 
 /********************************************/ 
 //formulario de inscripcion
@@ -77,7 +77,7 @@ nombre.onchange = () => { //evento si ingresa nombre activa el checkusuario
 }
 
 //eleccion de materias
-const materiaElegida = () => { //para que aparezcan las opciones de profesores segun la materia elegida
+const materiaElegida = () => { //para que aparezcan las opciones de profesores según la materia elegida
     const opcionMateria = materia.value;
     const divGlobal = document.querySelector("#segunMateria").querySelectorAll(".datos");
     switch (opcionMateria) {

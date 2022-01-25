@@ -7,6 +7,7 @@
     <link rel = "stylesheet" href="scss/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--agrego fuentes-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
     <title>Instituto Tatu</title>
 </head>
@@ -41,44 +42,131 @@
     </header>
     <section>
         <div class="section1"> 
-            
-            <div class="bienvenidos">
-                <h1>Bienvenidos</h1>
-                <p>Un lugar en dónde te vamos a ayudar y apoyar en la materia que lo necesites.
+            <div id="bienvenidos">
+                <h1>Bienvenidos al Instituto Tatu</h1>
+                <p>Llegamos a las familias para ayudarlas a que tengan <b>mejores posibilidades</b>, 
+                    construyendo su futuro <b>mediante la educación.</b>
                 </p>
                 <button class="btn"><a href="#empecemos">Empecemos</a></button>
             </div>
-            <img src="assets/introd.svg" alt="ImagenInicio">
-            <img>
+            <div id="imagenInicio">
+                <img src="assets/introd.svg" alt="imagenInicio">
+            </div>
         </div>
     </section>
-    <section class="section2" ><a name="empecemos">
-        <h3>¿Cómo me inscribo?</h3>
+    <section class="section2" >
+        <a name="empecemos">
+            <h3>¿Cómo me inscribo?</h3>
         </a>
         <div class="inscripcion">
             <div class="postIt">
-                <img src="assets/postIt1.svg" alt="postIt">
-                <h4>Ingresa tus datos</h4>
+                <img src="assets/postIt2.svg" alt="postIt">
             </div>
             <div class="postIt">
-                <img src="assets/postIt2.svg" alt="postIt">
-                <h4>Elegí la materia.</h4>
+                <img src="assets/postIt1.svg" alt="postIt">
             </div>
             <div class="postIt">
                 <img src="assets/postIt3.svg" alt="postIt">
-                <h4>Elegí tu profe.</h4>
             </div>
             <div class="postIt">
                 <img src="assets/postIt4.svg" alt="postIt">
-                <h4>Elegí el horario.</h4>
             </div>
-            <div id="postIt"></div>
         </div>
         <div class="inscribite">
             <button id="btnInscripcion"><a  href="#empecemos"> Inscribite ahora</a></button>
         </div>
     </section>
-    <section class= "section3">
+    <section class="section3">
+        <div id="aprendamos">
+            <div id="aprendiendo">
+                <h3>Aprendamos juntos</h3>
+                <p>Como familia se fundó y de familias se nutre diariamente, dando todo de nosotros mismos para poder
+                    llevar al alumnado a desempeñarse de la mejor manera, sin perder de vista el <b>apoyo</b> y la 
+                    <b>contención</b> que se les brinda.<br>
+                    Es nuestra misión otorgar siempre las mejores <b>herramientas</b> para que nuestros alumnos puedan <b>aprender</b>
+                    y estar en un ambiente cómodo para evacuar dudas.
+                </p>
+                <div id="button">
+                    <button>
+                        <a  href="#empecemos"> Inscribite ahora</a>
+                    </button>
+                </div>
+            </div>
+            <img src="assets/aprendamos.svg" alt="aprendamos">
+        </div>
+    </section>
+    <section class ="section4">
+        <h3>Nuestras clases </h3>
+        <div class="clases">
+            <div class="niveles">
+                <img src="assets/nene.svg">
+                <h4>Primaria</h4>
+                <p>lorem impsum</p>
+            </div>
+            <div class="niveles">
+                <img src="assets/ingreso.svg">
+                <h4>Ingreso a Ort</h4>
+                <p>lorem impsum</p>
+            </div>
+        </div>
+        <div class="inscribite">
+            <button id="btnInscripcion"><a  href="#empecemos"> Inscribite ahora</a></button>
+        </div>
+    </section>
+    <section class="section5">
+        <div id="equipo1">
+            <div id="profes">
+                <h3>¡Hay equipo!</h3>
+                <p>Nuestro instituto acoge y educa a cientos de alumnos por año, posicionándose como uno
+                     de los <b>líderes</b> en el mercado de institutos de apoyo escolar. Nuestra masividad no quita
+                      nuestra <b>excelencia</b> en materia de apoyo primario, e ingreso a Ort.
+                </p>
+                <div id="button">
+                    <button>
+                        <a  href="#empecemos"> Inscribite ahora</a>
+                    </button>
+                </div>
+            </div>
+            <img id="equipoImagen"src="assets/equipo.svg" alt="equipo">
+        </div>
+        <div id="especialistas">
+            <h3>Nuestros especialistas</h3>
+            <div id="profesEspecialistas">
+                <div id="cardProfes">
+                    <img src="assets/Gaston1.png" alt="gaston">
+                    <h4>Gastón</h4> 
+                    <p>
+                        Dinámico y entretenido, logra que la matemática se convierta en un juego en
+                        el que todos los chicos quieren participar
+                    </p>
+                </div>
+                <div id="cardProfes">
+                    <img src="assets/Nicole1.png" alt="nicole">
+                    <h4>Nicole</h4>                        
+                    <p>
+                        Gracias a ella, los verbos dejaron de ser un problema y los errores ortográficos
+                        quedaron en el pasado.
+                    </p> 
+                </div>  
+                <div id="cardProfes">
+                    <img src="assets/Mati1.png" alt="mati">
+                    <h4>Mati</h4>
+                    <p>
+                        Adorado por todos los chicos, la historia enseñada por él es como un cuento
+                        lleno de aventuras.
+                    </p>
+                </div>
+                <div id="cardProfes">
+                    <img src="assets/Stephi1.png" alt="stephi">
+                    <h4>Stephi</h4>
+                    <p>
+                        Un viaje a través de los países, su clima, su división política, su topografía, y mucho más.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class= "section6">
         <div class="formularioInscripcion">
             <form id="formulario">
                 <div class="datos">
@@ -112,8 +200,7 @@
                 </div>
                 <div class="datos"> 
                     <h3>En qué materia necesitás apoyo?</h3>
-                    <select id="materia"> <!--drop down eleccion materias-->
-                        <option value="0" id="eleccion">Elegí la materia</option>
+                    <select id="materia" placeholder="Elegí la materia"> <!--drop down eleccion materias-->
                         <option value="1" id="matematica">Matemática</option>
                         <option value="2" id="lengua">Lengua</option>
                         <option value="3" id="historia">Historia</option>
@@ -156,6 +243,7 @@
             </form>
         </div>
     </section>
+    <script>src="https://code.jquery.com/jquery-3.6.0.min.js"</script>
     <script  src = "main.js"></script>
 </body>
 </html>
