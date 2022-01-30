@@ -1,3 +1,32 @@
+//navMenuHamburguesa
+const toggleButton = document.getElementById("buttonMenu"); // elijoClickeables
+const navWrapper = document.getElementById("nav");
+
+toggleButton.addEventListener("click", () => {     //toggleAgregaClaseYSacaClase
+    toggleButton.classList.toggle("close");
+    navWrapper.classList.toggle("show");
+});
+navWrapper.addEventListener("click", e => {     //escondoMenu
+  if (e.target.id === "nav") {
+    navWrapper.classList.remove("show");
+    toggleButton.classList.remove("close");
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let button = document.getElementById("btnInscripcion"); //evento onclick
 button.onclick = () =>{alert("Feliz comienzo")};
@@ -151,7 +180,8 @@ email.onchange = ()=> { //evento cuando cambia el campo email, chequea que sea v
 /********************************************/
 /**************profesores********/
 class Profesores {
-    constructor(nombre, materia, introduccion) {
+    constructor(imagen, nombre, materia, introduccion) {
+        this.imagen= imagen;
         this.nombre = nombre;
         this.materia = materia;
         this.introduccion = introduccion;
@@ -165,6 +195,15 @@ let Nicole = new Profesores ("Nicole", "Lengua","Gracias a ella, los verbos deja
     los errores ortográficos quedaron en el pasado.");
 let Stephi = new Profesores ("Stephi", "Geografía", "Un viaje a través de los países, su clima, su división\
     política, su topografía, y mucho más.");
+
+let cardProfesores = function () {
+    return this.imagen + ""+ this.nombre +""+ this.materia + ""+ this.introduccion;
+ alert (Profesores.cardProfesores);
+}
+
+
+
+
 
 let arrayProfesores = [
     {profesor: "Gastón", materia: "Matemática", introduccion:"Dinámico y entretenido, logra que la matemática se\

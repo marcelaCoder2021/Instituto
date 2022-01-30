@@ -1,49 +1,116 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
   border: 0ch;
 }
+* h3 {
+  color: #FEB500;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-size: 3.2vw;
+  letter-spacing: 3px;
+  padding-bottom: 7.5vh;
+  padding-top: 7.5vh;
+  text-align: center;
+}
 
-.encabezado {
-  height: 4rem;
-  width: 100%;
-  background-color: #F288D6;
+.mainHeader {
+  height: 50px;
   display: flex;
   justify-content: space-between;
-  position: -webkit-sticky;
-  position: sticky;
+  align-items: center;
+  background-color: #FACCCC;
+  padding: 0 0.4rem;
+}
+
+.mainLogo {
+  width: 3.4em;
+  height: auto;
+}
+
+.mainNav {
+  position: fixed;
   top: 0;
-  z-index: 1030;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  left: 0;
+  height: 80vh;
+  width: 100%;
+  margin-left: -100%;
+  transition: all 0.2s linear;
+  z-index: 100;
+  background: rgba(250, 204, 204, 0.7);
 }
-.encabezado .logo {
-  padding: 5px;
-  margin-left: 5vw;
+
+.mainNav.show {
+  margin-left: 0;
 }
-.encabezado .bg-light {
-  background-color: #FFD687 !important;
-}
-.encabezado .navbar-light .navbar-toggler {
-  color: black;
-}
-.encabezado .navbar-light .navbar-nav .nav-link.active, .encabezado .navbar-light .navbar-light .navbar-nav .show > .nav-link {
-  color: black;
-  font-size: 16px;
-}
-.encabezado ul {
+
+.navLinks {
+  background: #FACCCC;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 35vw;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
   list-style: none;
-  display: flex;
-  justify-content: space-around;
 }
-.encabezado .container, .encabezado .container-fluid, .encabezado .container-lg, .encabezado .container-md, .encabezado .container-sm, .encabezado .container-xl, .encabezado .container-xxl {
-  background-color: #FFD687;
-}
-.encabezado a {
+
+.linkItem {
+  color: #FEB500;
   text-decoration: none;
-  /*sacaSubrayadoTodosA*/
+  font: "Noto sans";
+  font-weight: bold;
+  font-size: 3.3vw;
+  position: relative;
+}
+
+.buttonMenu {
+  z-index: 200;
+  width: 40px;
+  height: 40px;
+  border: none;
   display: flex;
-  justify-content: space-between;
+  background: none;
+  flex-direction: column;
+  /* Pondrá un span debajo del otro*/
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* 
+  Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
+*/
+.buttonMenu span {
+  width: 37px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #FEB500;
+  border-radius: 3px;
+  transform-origin: 4px 0px;
+  transition: all 0.2s linear;
+}
+
+/* 
+  con los span dibujamos un icono de cerrar 
+  para mostrar cuándo la navegación este abierta 
+*/
+.buttonMenu.close span {
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, 0px);
+  color: #FEB500;
+  background: #FEB500;
+}
+
+.buttonMenu.close span:nth-child(2) {
+  transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+.buttonMenu.close span:nth-child(3) {
+  display: none;
 }
 
 .section1 {
@@ -95,16 +162,6 @@
 .section2 {
   background: rgba(254, 181, 0, 0.1);
 }
-.section2 h3 {
-  text-align: center;
-  font-family: "Ultra", serif;
-  letter-spacing: 3px;
-  color: #FEB500;
-  font-size: 3.5vw;
-  font-weight: 400;
-  line-height: 55px;
-  text-align: center;
-}
 .section2 .inscripcion {
   padding: 40px;
   display: flex;
@@ -143,15 +200,6 @@
   height: auto;
   padding-left: 8vw;
 }
-.section3 #aprendamos #aprendiendo h3 {
-  color: #FEB500;
-  font-family: "Ultra", serif;
-  font-weight: 400;
-  font-size: 3.2vw;
-  letter-spacing: 3px;
-  padding-bottom: 7.5vh;
-  text-align: center;
-}
 .section3 #aprendamos #aprendiendo p {
   font-size: 1.3vw;
   font-family: "Noto sans";
@@ -181,15 +229,6 @@
 .section4 {
   background: #feb5001a;
   padding: 10vh 5vw;
-}
-.section4 h3 {
-  color: #FEB500;
-  font-family: "Ultra", serif;
-  font-weight: 400;
-  font-size: 3.2vw;
-  letter-spacing: 3px;
-  padding-bottom: 7.5vh;
-  text-align: center;
 }
 .section4 .clases {
   display: flex;
@@ -234,15 +273,6 @@
   display: flex;
   flex-direction: row-reverse;
 }
-.section5 #equipo1 #profes h3 {
-  color: #FEB500;
-  font-family: "Ultra", serif;
-  font-weight: 400;
-  font-size: 3.2vw;
-  letter-spacing: 3px;
-  padding-bottom: 7.5vh;
-  text-align: center;
-}
 .section5 #equipo1 #profes p {
   font-size: 1.3vw;
   font-family: "Noto sans";
@@ -276,16 +306,6 @@
 .section5 #especialistas {
   display: flex;
   flex-direction: column;
-}
-.section5 #especialistas h3 {
-  color: #FEB500;
-  font-family: "Ultra", serif;
-  font-weight: 400;
-  font-size: 3.2vw;
-  letter-spacing: 3px;
-  padding-bottom: 7.5vh;
-  padding-top: 7.5vh;
-  text-align: center;
 }
 .section5 #especialistas #profesEspecialistas {
   display: flex;

@@ -2,6 +2,16 @@
 *{padding: 0; 
     margin: 0;
     border: 0ch;
+    h3{
+        color: #FEB500;
+        font-family: "Ultra", serif;
+        font-weight: 400;
+        font-size: 3.2vw;
+        letter-spacing: 3px;
+        padding-bottom: 7.5vh;
+        padding-top: 7.5vh;
+        text-align: center; 
+    }
 }
 
 //*variables/////////
@@ -9,46 +19,101 @@ $h1FontFamily:'Ultra', serif;//fuente
 $fontColor: black;
 $fontTexto: "Noto sans";
 
-.encabezado{//header
-    height: 4rem;
-    width: 100%;
-    background-color:#F288D6 ;//fondoHeader
+//header  
+.mainHeader {
+    height: 50px;
     display: flex;
     justify-content: space-between;
-    position:sticky;//encabezadoFijo
+    align-items: center;
+    background-color: #FACCCC;
+    padding: 0 0.4rem;
+  }
+.mainLogo {
+    width: 3.4em;
+    height: auto;
+  }
+.mainNav {
+    position: fixed;
     top: 0;
-    z-index: 1030;
-    padding-right: 3rem;
-    padding-left: 3rem;
-    .logo {
-        padding: 5px;
-        margin-left:5vw;
-    }
-    .bg-light { //menuDeNavegacion
-        background-color:#FFD687 !important;
-    }
-    .navbar-light {
-        .navbar-toggler {
-            color:$fontColor;
-        }
-        .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
-            color: $fontColor;
-            font-size: 16px;
-        }
-    }
-    ul {
-        list-style: none;//sacaViñetaLista
-        display: flex;
-        justify-content:space-around;
-    }
-    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        background-color: #FFD687;
-    }
-    a {text-decoration: none; /*sacaSubrayadoTodosA*/
-        display: flex;
-        justify-content: space-between;
-    }
- } //terminaMenuNavegacion
+    left: 0;
+    height: 80vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    z-index: 100;
+    background: rgba(250,204,204,0.7);
+  }
+  .mainNav.show {
+    margin-left: 0;
+  }
+  .navLinks {
+    background: #FACCCC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 35vw;
+    height: 100%;
+    align-items: center;
+    justify-content:space-evenly;
+    list-style: none;
+  }
+  .linkItem {
+    
+    color:#FEB500;
+    text-decoration: none;
+    font:$fontTexto;
+    font-weight: bold;
+    font-size: 3.3vw;
+    position: relative;
+  }
+  .buttonMenu {
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column; /* Pondrá un span debajo del otro*/
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  /* 
+    Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
+  */
+  
+  .buttonMenu span {  //menuHamburguesaRayas
+    width: 37px; 
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #FEB500;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+  }
+  
+  /* 
+    con los span dibujamos un icono de cerrar 
+    para mostrar cuándo la navegación este abierta 
+  */
+  
+  .buttonMenu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+            color: #FEB500;
+            background:#FEB500;
+  }
+  
+  .buttonMenu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  
+  .buttonMenu.close span:nth-child(3) {
+    display: none;
+  }
+   //terminaMenuNavegacion
 //cierraHeader///////////
 
 //estilosSection1////////
@@ -102,17 +167,6 @@ $fontTexto: "Noto sans";
 //estilosSeccion2
 .section2{
     background: rgba(254, 181, 0, 0.1);
-    h3{
-        text-align: center;
-        font-family: $h1FontFamily;
-        letter-spacing: 3px;
-        color: #FEB500;
-        font-size: 3.5vw;
-        font-weight: 400;
-        line-height: 55px;
-        text-align: center;
-
-    }
     .inscripcion{
         padding:40px;
         display: flex;
@@ -154,15 +208,6 @@ $fontTexto: "Noto sans";
             padding-left: 8vw;
         }
         #aprendiendo{
-            h3 {
-                color: #FEB500;
-                font-family: $h1FontFamily;
-                font-weight: 400;
-                font-size: 3.2vw;
-                letter-spacing: 3px;
-                padding-bottom: 7.5vh;
-                text-align: center;
-            }
             p{
                 font-size: 1.3vw;
                 font-family: $fontTexto;
@@ -197,15 +242,6 @@ $fontTexto: "Noto sans";
 .section4{
     background: #feb5001a;
     padding:10vh 5vw;
-    h3{
-        color: #FEB500;
-        font-family: $h1FontFamily;
-        font-weight: 400;
-        font-size: 3.2vw;
-        letter-spacing: 3px;
-        padding-bottom: 7.5vh;
-        text-align: center;
-    }
     .clases{
         display: flex;
         flex-direction: row;
@@ -251,15 +287,6 @@ $fontTexto: "Noto sans";
         display: flex;
         flex-direction: row-reverse;
         #profes{
-            h3{
-                color: #FEB500;
-                font-family: $h1FontFamily;
-                font-weight: 400;
-                font-size: 3.2vw;
-                letter-spacing: 3px;
-                padding-bottom: 7.5vh;
-                text-align: center;
-            }
             p{
                 font-size: 1.3vw;
                 font-family: $fontTexto;
@@ -294,16 +321,6 @@ $fontTexto: "Noto sans";
     #especialistas{
         display: flex;
         flex-direction: column;
-        h3{
-            color: #FEB500;
-            font-family: $h1FontFamily;
-            font-weight: 400;
-            font-size: 3.2vw;
-            letter-spacing: 3px;
-            padding-bottom: 7.5vh;
-            padding-top: 7.5vh;
-            text-align: center;
-        }
         #profesEspecialistas{
             display: flex;
             flex-direction: row;

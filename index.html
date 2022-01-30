@@ -12,33 +12,31 @@
     <title>Instituto Tatu</title>
 </head>
 <body>
-    <header class="encabezado"><!--AbreHeader--> 
-        <a class="navbar-brand" href="index.html"> <!--logo-->
-            <!--<img id="logo" src="assets/logo.png" alt="logo">-->
-        </a>        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>  
-        <nav class="navbar navbar-expand-lg navbar-light bg-light"><!--menuNavegacion-->
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="pages/staff.html">staff</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"aria-current="page" href="pages/materias.html">Materias</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>   
+    <header class="mainHeader"><!--AbreHeader--> 
+        <a href="index.html">
+            <img class="mainLogo" src="assets/logo.png">
+        </a>
+        <nav id="nav" class="mainNav">
+            <ul class="navLinks">
+                <li>
+                    <a class="linkItem" href="index.html"> Home</a>
+                </li>
+                <li>
+                    <a class="linkItem" href="#formularioInscripcion">Empecemos</a>
+                </li>
+                <li> 
+                    <a class="linkItem" href="#empecemos">Nuestros especialistas</a>
+                </li>
+                <li>
+                <a class="linkItem" href="#empecemos">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+            <button id="buttonMenu" class="buttonMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
     </header>
     <section>
         <div class="section1"> 
@@ -47,7 +45,7 @@
                 <p>Llegamos a las familias para ayudarlas a que tengan <b>mejores posibilidades</b>, 
                     construyendo su futuro <b>mediante la educación.</b>
                 </p>
-                <button class="btn"><a href="#empecemos">Empecemos</a></button>
+                <button class="btn"><a href="#formularioInscripcion">Empecemos</a></button>
             </div>
             <div id="imagenInicio">
                 <img src="assets/introd.svg" alt="imagenInicio">
@@ -73,7 +71,7 @@
             </div>
         </div>
         <div class="inscribite">
-            <button id="btnInscripcion"><a  href="#empecemos"> Inscribite ahora</a></button>
+            <button id="btnInscripcion"><a href="#formularioInscripcion"> Inscribite ahora</a></button>
         </div>
     </section>
     <section class="section3">
@@ -88,7 +86,7 @@
                 </p>
                 <div id="button">
                     <button>
-                        <a  href="#empecemos"> Inscribite ahora</a>
+                        <a  href="#formularioInscripcion"> Inscribite ahora</a>
                     </button>
                 </div>
             </div>
@@ -101,16 +99,14 @@
             <div class="niveles">
                 <img src="assets/nene.svg">
                 <h4>Primaria</h4>
-                <p>lorem impsum</p>
             </div>
             <div class="niveles">
                 <img src="assets/ingreso.svg">
                 <h4>Ingreso a Ort</h4>
-                <p>lorem impsum</p>
             </div>
         </div>
         <div class="inscribite">
-            <button id="btnInscripcion"><a  href="#empecemos"> Inscribite ahora</a></button>
+            <button id="btnInscripcion"><a  href="#formularioInscripcion"> Inscribite ahora</a></button>
         </div>
     </section>
     <section class="section5">
@@ -123,7 +119,7 @@
                 </p>
                 <div id="button">
                     <button>
-                        <a  href="#empecemos"> Inscribite ahora</a>
+                        <a  href="#formularioInscripcion"> Inscribite ahora</a>
                     </button>
                 </div>
             </div>
@@ -167,39 +163,40 @@
         </div>
     </section>
     <section class= "section6">
+        <h3 id="formularioInscripcion">Inscribite ahora</h3>
         <div class="formularioInscripcion">
             <form id="formulario">
                 <div class="datos">
-                    <h3>Ingresá tu nombre</h3>
+                    <h4>Ingresá tu nombre</h4>
                     <input type="text" id="nombre" placeholder="Ingresá tu nombre">
                     <small></small><!--para mandar mensaje de error-->
                 </div>
                 <div class="datos">
-                    <h3>Ingresá el nombre de tus padres</h3>
+                    <h4>Ingresá el nombre de tus padres</h4>
                     <input type="text" id="nombrePadres" placeholder="Ingresá el nombre de tus padres">
                     <small></small><!--para mandar mensaje de error-->
                 </div>
                 <div class="datos">
-                    <h3>Ingresá tu email</h3>
+                    <h4>Ingresá tu email</h4>
                     <input type="email" id="email" placeholder="Ingresá tu email">
                     <small></small><!--para mandar mensaje de error-->
                 </div>
                 <div class="datos"> 
-                    <h3>Ingresá tu celu</h3>
+                    <h4>Ingresá tu celu</h4>
                     <input type="phone" id="phone" placeholder="Ingresá tu celu">
                     <small></small><!--para mandar mensaje de error-->
                 </div>
                 <div class="datos">
-                    <h3>A qué escuela vas?</h3>
+                    <h4>A qué escuela vas?</h4>
                     <input type="text" id="escuela" placeholder="A qué escuela vas?">
                     <small></small><!--para mandar mensaje de error-->
                 </div>
                 <div class="datos">
-                    <h3>En qué grado/año estás?</h3>
+                    <h4>En qué grado/año estás?</h4>
                     <input type="text" id="grado" placeholder="En qué grado/año estás?">
                 </div>
                 <div class="datos"> 
-                    <h3>En qué materia necesitás apoyo?</h3>
+                    <h4>En qué materia necesitás apoyo?</h4>
                     <select id="materia" placeholder="Elegí la materia"> <!--drop down eleccion materias-->
                         <option value="1" id="matematica">Matemática</option>
                         <option value="2" id="lengua">Lengua</option>
