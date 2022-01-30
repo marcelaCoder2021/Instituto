@@ -149,3 +149,30 @@ email.onchange = ()=> { //evento cuando cambia el campo email, chequea que sea v
 }
  
 /********************************************/
+/**************profesores********/
+class Profesores {
+    constructor(nombre, materia, introduccion) {
+        this.nombre = nombre;
+        this.materia = materia;
+        this.introduccion = introduccion;
+    }
+}
+let Mati = new Profesores ("Mati", "Historia","Adorado por todos los chicos, la historia enseñada por él\
+    es como un cuento lleno de aventuras.");  
+let Gastón = new Profesores ("Gastón", "Matemática","Dinámico y entretenido, logra que la matemática se\
+    convierta en un juego en el que todos los chicos quieren participar.");
+let Nicole = new Profesores ("Nicole", "Lengua","Gracias a ella, los verbos dejaron de ser un problema y\
+    los errores ortográficos quedaron en el pasado.");
+let Stephi = new Profesores ("Stephi", "Geografía", "Un viaje a través de los países, su clima, su división\
+    política, su topografía, y mucho más.");
+
+let arrayProfesores = [
+    {profesor: "Gastón", materia: "Matemática", introduccion:"Dinámico y entretenido, logra que la matemática se\
+     convierta en un juego en el que todos los chicos quieren participar."},
+    {profesor: "Nicole", materia: "Lengua", introduccion:"Gracias a ella, los verbos dejaron de ser un problema y\
+     los errores ortográficos quedaron en el pasado."},
+    {profesor: "Mati", materia: "Historia", introduccion:"Adorado por todos los chicos, la historia enseñada por él\
+     es como un cuento lleno de aventuras."},
+    {profesor: "Stephi", materia: "Geografía", introduccion:"Un viaje a través de los países, su clima, su división\
+     política, su topografía, y mucho más."},
+];
