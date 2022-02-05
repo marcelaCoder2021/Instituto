@@ -372,4 +372,64 @@ h3 {
   width: 249px;
   font-family: "Noto sans";
   text-align: center;
+}
+
+.footer {
+  background: #FACCCC;
+  padding-top: 2%;
+  justify-content: space-around;
+}
+.footer h4 {
+  font-weight: bold;
+}
+.footer p {
+  font-size: 14px;
+}
+
+.contacto {
+  max-width: 100%;
+}
+.contacto img {
+  float: left;
+}
+.contacto ol {
+  padding: 0%;
+}
+.contacto li {
+  list-style: none;
+  justify-content: center;
+}
+.contacto p {
+  margin-left: 2%;
+}
+
+.pago {
+  justify-self: center;
+  padding-left: 5%;
+}
+.pago .grid_pago {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5%;
+}
+
+.sociales {
+  padding-left: 15%;
+}
+.sociales .grid_sociales {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5%;
+}
+
+.copy {
+  text-align: center;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+.suscripcion {
+  padding-top: 5%;
 }/*# sourceMappingURL=styles.css.map */
