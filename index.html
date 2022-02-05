@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Instituto Tatu</title>
 </head>
 <body>
@@ -45,7 +46,7 @@
                 <p>Llegamos a las familias para ayudarlas a que tengan <b>mejores posibilidades</b>, 
                     construyendo su futuro <b>mediante la educación.</b>
                 </p>
-                <button class="btn"><a href="#formularioInscripcion">Empecemos</a></button>
+                <button class="btnInscripcion" href="#formularioInscripcion" class="aButton">Inscribite ahora</button>
             </div>
             <div id="imagenInicio">
                 <img src="assets/introd.svg" alt="imagenInicio">
@@ -61,17 +62,17 @@
                 <img src="assets/postIt2.svg" alt="Registrate" >
             </div>
             <div class="postIt">
-                <img src="assets/postIt1.svg" alt="Elegi segunMateria"  >
+                <img src="assets/postIt1.svg" alt="Elegí según Materia">
             </div>
             <div class="postIt">
-                <img src="assets/postIt3.svg" alt="Elegi profe"   >
+                <img src="assets/postIt3.svg" alt="Elegí profe">
             </div>
             <div class="postIt">
-                <img src="assets/postIt4.svg" alt="Elegi horario"  >
+                <img src="assets/postIt4.svg" alt="Elegi horario">
             </div>
         </div>
         <div class="inscribite">
-            <button id="btnInscripcion"><a href="#formularioInscripcion"> Inscribite ahora</a></button>
+            <button class="btnInscripcion" href="#formularioInscripcion" class="aButton">Inscribite ahora</button>
         </div>
     </section>
     <section class="section3">
@@ -85,9 +86,7 @@
                     y estar en un ambiente cómodo para evacuar dudas.
                 </p>
                 <div id="button">
-                    <button>
-                        <a  href="#formularioInscripcion"> Inscribite ahora</a>
-                    </button>
+                    <button class=btnInscripcion href="#formularioInscripcion" class="aButton">Inscribite ahora</button>
                 </div>
             </div>
             <img src="assets/aprendamos.svg" alt="aprendamos">
@@ -106,7 +105,7 @@
             </div>
         </div>
         <div class="inscribite">
-            <button id="btnInscripcion"><a  href="#formularioInscripcion"> Inscribite ahora</a></button>
+            <button class="btnInscripcion" href="#formularioInscripcion" class="aButton">Inscribite ahora</button>
         </div>
     </section>
     <section class="section5">
@@ -118,43 +117,45 @@
                       nuestra <b>excelencia</b> en materia de apoyo primario, e ingreso a Ort.
                 </p>
                 <div id="button">
-                    <button>
-                        <a  href="#formularioInscripcion"> Inscribite ahora</a>
-                    </button>
+                    <button class=btnInscripcion href="#formularioInscripcion" class="aButton">Inscribite ahora</button>
                 </div>
             </div>
-            <img id="equipoImagen"src="assets/equipo.svg" alt="equipo">
+            <img id="equipoImagen"src="assets/equipo.svg" alt="equipo de profesores">
         </div>
         <div id="especialistas">
             <h3>Nuestros especialistas</h3>
             <div id="profesEspecialistas">
-                <div id="cardProfes">
+                <div class="cardProfes">
+                    <h4>Gastón</h4>
                     <img src="assets/Gaston1.png" alt="gaston">
-                    <h4>Gastón</h4> 
+                     <h4>Matemática</h4>
                     <p>
                         Dinámico y entretenido, logra que la matemática se convierta en un juego en
                         el que todos los chicos quieren participar
                     </p>
                 </div>
-                <div id="cardProfes">
+                <div class="cardProfes">
+                    <h4>Nicole</h4>
                     <img src="assets/Nicole1.png" alt="nicole">
-                    <h4>Nicole</h4>                        
+                    <h4>Lengua</h4>                      
                     <p>
                         Gracias a ella, los verbos dejaron de ser un problema y los errores ortográficos
                         quedaron en el pasado.
                     </p> 
                 </div>  
-                <div id="cardProfes">
-                    <img src="assets/Mati1.png" alt="mati">
+                <div class="cardProfes">
                     <h4>Mati</h4>
+                    <img src="assets/Mati1.png" alt="mati">
+                    <h4>Historia</h4>
                     <p>
                         Adorado por todos los chicos, la historia enseñada por él es como un cuento
                         lleno de aventuras.
                     </p>
                 </div>
-                <div id="cardProfes">
-                    <img src="assets/Stephi1.png" alt="stephi">
+                <div class="cardProfes">
                     <h4>Stephi</h4>
+                    <img src="assets/Stephi1.png" alt="stephi">
+                    <h4>Geografia</h4>
                     <p>
                         Un viaje a través de los países, su clima, su división política, su topografía, y mucho más.
                     </p>

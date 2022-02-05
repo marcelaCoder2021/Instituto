@@ -12,11 +12,26 @@ navWrapper.addEventListener("click", e => {     //escondoMenu
     toggleButton.classList.remove("close");
   }
 });
+//fin boton hamburguesa
+/*************************************************************************************************************/
+//animacion boton inscribite ahora
+let animateButton = function(e) {
+    e.preventDefault;
+    //reset animation
+    e.target.classList.remove('animate');
+    e.target.classList.add('animate');
+    setTimeout(function(){
+      e.target.classList.remove('animate');
+    },900);
+  };
+  let bubblyButtons = document.getElementsByClassName("btnInscripcion");
 
-
-
-
-
+  for (var i = 0; i < bubblyButtons.length; i++) {
+    bubblyButtons[i].addEventListener('mouseenter', animateButton, false);
+  };
+//fin animacion botn inscribite ahora
+/**************************************************************************************************/
+//animacion cardProfesores
 
 
 
@@ -30,23 +45,38 @@ navWrapper.addEventListener("click", e => {     //escondoMenu
 
 let button = document.getElementById("btnInscripcion"); //evento onclick
 button.onclick = () =>{alert("Feliz comienzo")};
-//*************ESTO FUE PARA UN DESAFIO*********************
-/*console.log (document.querySelectorAll(".postIt h4")); //muestro por consola los h4 con class postIt, se ve como un array
-let postIt = document.querySelectorAll (".postIt h4");
-console.log ((postIt.innerHTML));  
-postIt.forEach(element => {
-    console.log (element.innerHTML); //muestro por consola el contenido de cada h4 de mi clase "PostIt"
-    }
-);
-let nuevoPostIt = document.createElement("h4"); //creo nuevo h4
-nuevoPostIt.setAttribute("id","postIt"); //le pongo id
-nuevoPostIt.innerHTML="Y listo"; // le agrego texto
-console.log (nuevoPostIt); //por consola lo agregado, esta como string
-console.log(nuevoPostIt.innerHTML); //muestro por consola el nuevo contenido
-document.getElementById("postIt").appendChild(nuevoPostIt); //agrego al HTML
-nuevoPostIt.style.background ="blue"; //le agrego color*/
 
-/********************************************/ 
+/******************************************************************************************************/ 
+//cardProfes
+/*const profesores = document.querySelector (".cardProfes");
+class Profesor {
+    constructor(imagen, nombre, materia, descripcion) {
+        this.imagen= imagen;
+        this.nombre = nombre;
+        this.materia = materia;
+        this.descripcion = descripcion;
+    }
+}
+function listadoAlumnos (){
+    let nombre = prompt ("¿Cómo te llamás?");
+    let padres = prompt("¿Cómo se llaman tus padres?");
+    let edad = parseInt( prompt("¿Cuántos años tenés?"));
+    let nombreEscuela = prompt ("¿A qué escuela vas?");
+    let anioEscolar =parseInt(prompt("¿En qué grado estás?"));
+    let materia = prompt ("¿En qué materia necesitas apoyo?");
+    const alumno = new Alumnos (nombre, padres, edad, nombreEscuela, anioEscolar, materia);
+    console.log (alumno);
+    return alumno;
+}
+listadoAlumnos ();
+
+const arrayAlumnos = [];
+    arrayAlumnos.push (new Alumnos (this.nombre, this.padres, this.edad, this.nombreEscuela, this.anioEscolar, this.materia));
+    console.log (arrayAlumnos);
+
+*/
+
+
 //formulario de inscripcion
 //variables formulario
 const nombre = document.querySelector("#nombre");
@@ -148,7 +178,7 @@ const materiaElegida = () => { //para que aparezcan las opciones de profesores s
             break;  
     }
 }
-materia.onchange = ()=> {  //evento 
+materia.onchange = ()=> {  //evento onchage
     materiaElegida();
     localStorage.setItem("Materia", materia.value); //guardo en localStorage la materia seleccionada
 }

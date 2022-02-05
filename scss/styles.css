@@ -3,10 +3,11 @@
   margin: 0;
   border: 0ch;
 }
-* h3 {
+
+h3 {
   color: #FEB500;
-  font-family: "Ultra", serif;
-  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 1000;
   font-size: 3.2vw;
   letter-spacing: 3px;
   padding-bottom: 7.5vh;
@@ -14,6 +15,118 @@
   text-align: center;
 }
 
+.btnInscripcion {
+  border-radius: 25.5px;
+  background-color: #FEB500;
+  text-decoration: none;
+  font-family: "Noto sans";
+  font-size: 1.2em;
+  color: black;
+  align-self: center;
+  display: inline-block;
+  padding: 2%;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px #da9c00;
+  cursor: pointer;
+}
+.btnInscripcion:focus {
+  outline: 0;
+}
+.btnInscripcion:before, .btnInscripcion:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.btnInscripcion:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, transparent 20%, #FEB500 20%, transparent 30%), radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, transparent 10%, #FEB500 15%, transparent 20%), radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, #FEB500 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.btnInscripcion:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, transparent 10%, #FEB500 15%, transparent 20%), radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, #FEB500 20%, transparent 20%), radial-gradient(circle, #FEB500 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.btnInscripcion:active {
+  transform: scale(0.9);
+  background-color: #e5a300;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.btnInscripcion.animate:before {
+  display: block;
+  -webkit-animation: topBubbles ease-in-out 0.75s forwards;
+          animation: topBubbles ease-in-out 0.75s forwards;
+}
+.btnInscripcion.animate:after {
+  display: block;
+  -webkit-animation: bottomBubbles ease-in-out 0.75s forwards;
+          animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@-webkit-keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+@-webkit-keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
 .mainHeader {
   height: 50px;
   display: flex;
@@ -119,8 +232,8 @@
 }
 .section1 #bienvenidos h1 {
   color: #FEB500;
-  font-family: "Ultra", serif;
-  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 1200;
   font-size: 3.5vw;
   letter-spacing: 3px;
   padding-bottom: 7.5vh;
@@ -132,18 +245,6 @@
   line-height: 30px;
   text-align: left;
   padding-bottom: 12vh;
-}
-.section1 #bienvenidos .btn {
-  height: 5.3vh;
-  width: 12vw;
-  border-radius: 25.5px;
-  background-color: #FEB500;
-}
-.section1 #bienvenidos .btn a {
-  text-decoration: none;
-  font-family: "Noto sans";
-  font-size: 1.2em;
-  color: black;
 }
 .section1 img {
   max-width: 50vw;
@@ -162,19 +263,6 @@
 .section2 .inscribite {
   display: flex;
   justify-content: center;
-}
-.section2 .inscribite button {
-  height: 5.3vh;
-  width: 12vw;
-  border-radius: 25.5px;
-  background-color: #FEB500;
-  align-self: center;
-}
-.section2 .inscribite button a {
-  text-decoration: none;
-  font-family: "Noto sans";
-  font-size: 1.2em;
-  color: black;
 }
 
 .section3 {
@@ -203,19 +291,6 @@
   display: flex;
   justify-content: center;
 }
-.section3 #aprendamos #aprendiendo #button button {
-  height: 5.3vh;
-  width: 12vw;
-  border-radius: 25.5px;
-  background-color: #FEB500;
-  align-self: center;
-}
-.section3 #aprendamos #aprendiendo #button button a {
-  text-decoration: none;
-  font-family: "Noto sans";
-  font-size: 1.2em;
-  color: black;
-}
 
 .section4 {
   background: #feb5001a;
@@ -233,27 +308,14 @@
 }
 .section4 .clases .niveles h4 {
   color: #FEB500;
-  font-family: "Ultra", serif;
-  font-weight: 100;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
   font-size: 1.8vw;
 }
 .section4 .inscribite {
   display: flex;
   justify-content: center;
   padding-top: 10vh;
-}
-.section4 .inscribite button {
-  height: 5.3vh;
-  width: 12vw;
-  border-radius: 25.5px;
-  background-color: #FEB500;
-  align-self: center;
-}
-.section4 .inscribite button a {
-  text-decoration: none;
-  font-family: "Noto sans";
-  font-size: 1.2em;
-  color: black;
 }
 
 .section5 {
@@ -276,19 +338,6 @@
   display: flex;
   justify-content: center;
 }
-.section5 #equipo1 #profes #button button {
-  height: 5.3vh;
-  width: 12vw;
-  border-radius: 25.5px;
-  background-color: #FEB500;
-  align-self: center;
-}
-.section5 #equipo1 #profes #button button a {
-  text-decoration: none;
-  font-family: "Noto sans";
-  font-size: 1.2em;
-  color: black;
-}
 .section5 #equipo1 #equipoImagen {
   padding-right: 8vw;
   width: 55%;
@@ -304,20 +353,21 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.section5 #especialistas #profesEspecialistas #cardProfes {
+.section5 #especialistas #profesEspecialistas .cardProfes {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.section5 #especialistas #profesEspecialistas #cardProfes h4 {
+.section5 #especialistas #profesEspecialistas .cardProfes h4 {
   color: #FEB500;
-  font-family: "Ultra", serif;
-  font-weight: 100;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
   font-size: 1.8vw;
-  padding-top: 5vh;
+  padding-top: 3vh;
+  padding-bottom: 2.5vh;
   text-align: center;
 }
-.section5 #especialistas #profesEspecialistas #cardProfes p {
+.section5 #especialistas #profesEspecialistas .cardProfes p {
   font-size: 15px;
   width: 249px;
   font-family: "Noto sans";
