@@ -43,9 +43,6 @@ let animateButton = function(e) {
 
 
 
-let button = document.getElementById("btnInscripcion"); //evento onclick
-button.onclick = () =>{alert("Feliz comienzo")};
-
 /******************************************************************************************************/ 
 //cardProfes
 /*const profesores = document.querySelector (".cardProfes");
@@ -80,11 +77,8 @@ const arrayAlumnos = [];
 //formulario de inscripcion
 //variables formulario
 const nombre = document.querySelector("#nombre");
-const nombrePadres = document.querySelector("#nombrePadres");
 const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
-const escuela = document.querySelector("#escuela");
-const grado = document.querySelector("#grado");
 const materia = document.querySelector("#materia");
 const matematica = document.querySelector("#matematica");
 const lengua = document.querySelector("#lengua");
@@ -182,7 +176,6 @@ materia.onchange = ()=> {  //evento onchage
     materiaElegida();
     localStorage.setItem("Materia", materia.value); //guardo en localStorage la materia seleccionada
 }
-
 
 //validacion email
 const isEmailValid = (email) => {
