@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -74,15 +73,11 @@
   display: flex;
   background: none;
   flex-direction: column;
-  /* Pondrá un span debajo del otro*/
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 
-/* 
-  Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
-*/
 .buttonMenu span {
   width: 37px;
   height: 4px;
@@ -94,10 +89,6 @@
   transition: all 0.2s linear;
 }
 
-/* 
-  con los span dibujamos un icono de cerrar 
-  para mostrar cuándo la navegación este abierta 
-*/
 .buttonMenu.close span {
   opacity: 1;
   transform: rotate(45deg) translate(0px, 0px);
