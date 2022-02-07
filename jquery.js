@@ -35,5 +35,20 @@ $(()=>{
       document.getElementById("nombre").innerHTML = nombre;
       document.getElementById("email").innerHTML = email; 
       alert ("Bienvenida/o " + nombre)
-  });   
+
+      //mandando info a API
+      
+      $.ajax({
+        type: "POST",
+          url:'https://jsonplaceholder.typicode.com/posts',
+        data:{
+        nombre: nombre,
+        email: email
+      },
+      success: function (respuesta){
+        console.log(respuesta)
+      
+    }
 });
+});
+})
