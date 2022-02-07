@@ -47,7 +47,7 @@
                 <p>Llegamos a las familias para ayudarlas a que tengan <b>mejores posibilidades</b>, 
                     construyendo su futuro <b>mediante la educación.</b>
                 </p>
-                <button class="btnInscripcion" href="#formularioInscripcion" class="aButton">Inscribite ahora</button>
+                <button class=btnInscripcion> <a href="#formularioInscripcion">Inscribite ahora</a></button>
             </div>
             <div id="imagenInicio">
                 <img src="assets/introd.svg" alt="imagenInicio">
@@ -56,7 +56,7 @@
     </section>
     <section class="section2" >
         <a name="empecemos">
-            <h3>¿Cómo me inscribo?</h3>
+            <h2>¿Cómo me inscribo?</h2>
         </a>
         <div class="inscripcion">
             <div class="postIt">
@@ -73,13 +73,13 @@
             </div>
         </div>
         <div class="inscribite">
-            <button class="btnInscripcion" href="#formularioInscripcion" class="aButton">Inscribite ahora</button>
+            <button class=btnInscripcion> <a href="#formularioInscripcion">Inscribite ahora</a></button>
         </div>
     </section>
     <section class="section3">
         <div id="aprendamos">
             <div id="aprendiendo">
-                <h3>Aprendamos juntos</h3>
+                <h2>Aprendamos juntos</h2>
                 <p>Como familia se fundó y de familias se nutre diariamente, dando todo de nosotros mismos para poder
                     llevar al alumnado a desempeñarse de la mejor manera, sin perder de vista el <b>apoyo</b> y la 
                     <b>contención</b> que se les brinda.<br>
@@ -87,14 +87,14 @@
                     y estar en un ambiente cómodo para evacuar dudas.
                 </p>
                 <div id="button">
-                    <button class=btnInscripcion href="#formularioInscripcion" class="aButton">Inscribite ahora</button>
+                    <button class=btnInscripcion> <a href="#formularioInscripcion">Inscribite ahora</a></button>
                 </div>
             </div>
             <img src="assets/aprendamos.svg" alt="aprendamos">
         </div>
     </section>
     <section class ="section4">
-        <h3>Nuestras clases </h3>
+        <h2>Nuestras clases </h2>
         <div class="clases">
             <div class="niveles">
                 <img src="assets/nene.svg">
@@ -106,25 +106,25 @@
             </div>
         </div>
         <div class="inscribite">
-            <button class="btnInscripcion" href="#formularioInscripcion" class="aButton">Inscribite ahora</button>
+            <button class=btnInscripcion> <a href="#formularioInscripcion">Inscribite ahora</a></button>
         </div>
     </section>
     <section class="section5">
         <div id="equipo1">
             <div id="profes">
-                <h3>¡Hay equipo!</h3>
+                <h2>¡Hay equipo!</h2>
                 <p>Nuestro instituto acoge y educa a cientos de alumnos por año, posicionándose como uno
                      de los <b>líderes</b> en el mercado de institutos de apoyo escolar. Nuestra masividad no quita
                       nuestra <b>excelencia</b> en materia de apoyo primario, e ingreso a Ort.
                 </p>
                 <div id="button">
-                    <button class=btnInscripcion href="#formularioInscripcion" class="aButton">Inscribite ahora</button>
+                    <button class=btnInscripcion> <a href="#formularioInscripcion">Inscribite ahora</a></button>
                 </div>
             </div>
             <img id="equipoImagen"src="assets/equipo.svg" alt="equipo de profesores">
         </div>
         <div id="especialistas">
-            <h3>Nuestros especialistas</h3>
+            <h2>Nuestros especialistas</h2>
             <div id="profesEspecialistas">
                 <div class="cardProfes">
                     <h4>Gastón</h4>
@@ -165,41 +165,33 @@
         </div>
     </section>
     <section class= "section6">
-        <h3 id="formularioInscripcion">Inscribite ahora</h3>
+        <h2 id="formularioInscripcion">Inscribite ahora</h2>
+        <button id="btnModal" class=btnInscripcion>Login</button><!--modal inicio sesión-->
+            <a href=".openModal"></a>
+                <div id="openModal" class="modalDialog">   
+                    <div id="myModal" class="modalContainer">
+                        <div class="modal-content">
+                            <h2>Iniciar sesión</h2> 
+                            <div class="datos">
+                                <h4>Ingresá tu nombre</h4>
+                                <input type="text" id="nombre" placeholder="Ingresá tu nombre">
+                                <small></small><!--para mandar mensaje de error-->
+                            </div>
+                            <div class="datos">
+                                <h4>Ingresá tu email</h4>
+                                <input type="email" id="email" placeholder="Ingresá tu email">
+                                <small></small><!--para mandar mensaje de error-->
+                            </div>
+                            <span class="confirmar" id="submit">Confirmar</span> 
+                        </div>
+                    </div>
+                </div>
         <div class="formularioInscripcion">
             <form id="formulario">
-                <div class="datos">
-                    <h4>Ingresá tu nombre</h4>
-                    <input type="text" id="nombre" placeholder="Ingresá tu nombre">
-                    <small></small><!--para mandar mensaje de error-->
-                </div>
-                <div class="datos">
-                    <h4>Ingresá el nombre de tus padres</h4>
-                    <input type="text" id="nombrePadres" placeholder="Ingresá el nombre de tus padres">
-                    <small></small><!--para mandar mensaje de error-->
-                </div>
-                <div class="datos">
-                    <h4>Ingresá tu email</h4>
-                    <input type="email" id="email" placeholder="Ingresá tu email">
-                    <small></small><!--para mandar mensaje de error-->
-                </div>
-                <div class="datos"> 
-                    <h4>Ingresá tu celu</h4>
-                    <input type="phone" id="phone" placeholder="Ingresá tu celu">
-                    <small></small><!--para mandar mensaje de error-->
-                </div>
-                <div class="datos">
-                    <h4>A qué escuela vas?</h4>
-                    <input type="text" id="escuela" placeholder="A qué escuela vas?">
-                    <small></small><!--para mandar mensaje de error-->
-                </div>
-                <div class="datos">
-                    <h4>En qué grado/año estás?</h4>
-                    <input type="text" id="grado" placeholder="En qué grado/año estás?">
-                </div>
-                <div class="datos"> 
-                    <h4>En qué materia necesitás apoyo?</h4>
+                <div class="datosMaterias"> 
+                    <h2>En qué materia necesitás apoyo?</h2>
                     <select id="materia" placeholder="Elegí la materia"> <!--drop down eleccion materias-->
+                        <option value="#" id="elegi">Elegí la materia</option>
                         <option value="1" id="matematica">Matemática</option>
                         <option value="2" id="lengua">Lengua</option>
                         <option value="3" id="historia">Historia</option>
@@ -209,25 +201,25 @@
                 </div> 
                 <div id="segunMateria">  <!-- de acuerdo a la materia elegida -->
                     <div id="elegi"></div>
-                    <div class="datos" id="profesorMatematica">
-                        <select>  <!--drop down eleccion profesor-->
+                    <div class="datos"  class="profesoresHide" id="profesorMatematica">
+                        <select  >  <!--drop down eleccion profesor-->
                             <option value="gu">Guido</option>
                             <option value="ni">Nicole</option>
                         </select>
                     </div>
-                    <div class="datos" id="profesorLengua">
-                        <select><!--drop down eleccion profesor-->
+                    <div class="datosProfesores" class="profesoresHide" id="profesorLengua">
+                        <select  ><!--drop down eleccion profesor-->
                             <option value="lu">Lucas</option>
                             <option value="st">Stefi</option>
                         </select>
                     </div>
-                    <div class="datos" id="profesorHistoria">
+                    <div class="datosProfesores" class="profesoresHide" id="profesorHistoria">
                         <button>Gastón</button>
                     </div>
-                    <div class="datos" id="profesorGeografia">
+                    <div class="datosProfesores" class="profesoresHide" id="profesorGeografia">
                         <button>Luciana</button>
                     </div>
-                    <div class="datos" id="profesorIngreso">
+                    <div class="datosProfesores"class="profesoresHide" id="profesorIngreso">
                         <select><!--drop down eleccion profesor-->
                         <option value="ta">Tatu</option>
                         <option value="me">Melu</option>
@@ -236,7 +228,7 @@
                     </select>
                     </div>
                 </div>
-                <div class="datos">
+                <div class="submit">
                     <button type="submit" id="btn">Enviar</button>
                 </div>    
             </form>
@@ -248,15 +240,15 @@
             <div class="row">
                 <!--contacto-->
                 <div class="contacto col-lg-4 col-sm-12">
-                    <h4>Contacto</h4>
+                    <h4> Contacto</h4>
                     <ol>
                         <li>
                             <img src="assets/telefono.png" alt="telefono">
-                            <p>011 7373 7373</p>
+                            <p> 011 7373 7373</p>
                         </li>
                         <li>
                             <img src="assets/mail.png" alt="mail">
-                            <p>institutoTatu@gmail.com</p>
+                            <p> institutoTatu@gmail.com</p>
                         </li>
                         <li>
                             <img src="assets/ubicacion.png" alt="ubicacion">
@@ -324,17 +316,3 @@
     <script src = "main.js"></script>
 </body>
 </html>
-<!--
-   <form id="formulario">
-                <p>¿Cómo te llamás?
-                    <input type="text">
-                </p>
-                <p>¿Cuál es tu teléfono?
-                    <input type="number">
-                </p>
-                <p>¿En qué materia necesitás apoyo?
-                    <input type="text">
-                </p>
-                <input type="submit" value="Enviar">
-           </form> 
--->

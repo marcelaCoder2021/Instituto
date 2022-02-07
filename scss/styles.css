@@ -4,15 +4,20 @@
   border: 0ch;
 }
 
-h3 {
+h2 {
   color: #FEB500;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 1000;
-  font-size: 3.2vw;
   letter-spacing: 3px;
   padding-bottom: 7.5vh;
   padding-top: 7.5vh;
   text-align: center;
+}
+
+h4 {
+  color: #FEB500;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
 }
 
 .btnInscripcion {
@@ -25,8 +30,6 @@ h3 {
   align-self: center;
   display: inline-block;
   padding: 2%;
-  margin-top: 100px;
-  margin-bottom: 60px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -35,6 +38,10 @@ h3 {
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 25px #da9c00;
   cursor: pointer;
+}
+.btnInscripcion a {
+  text-decoration: none;
+  color: black;
 }
 .btnInscripcion:focus {
   outline: 0;
@@ -234,7 +241,6 @@ h3 {
   color: #FEB500;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 1200;
-  font-size: 3.5vw;
   letter-spacing: 3px;
   padding-bottom: 7.5vh;
 }
@@ -306,12 +312,6 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
-.section4 .clases .niveles h4 {
-  color: #FEB500;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 800;
-  font-size: 1.8vw;
-}
 .section4 .inscribite {
   display: flex;
   justify-content: center;
@@ -362,7 +362,6 @@ h3 {
   color: #FEB500;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 800;
-  font-size: 1.8vw;
   padding-top: 3vh;
   padding-bottom: 2.5vh;
   text-align: center;
@@ -372,6 +371,62 @@ h3 {
   width: 249px;
   font-family: "Noto sans";
   text-align: center;
+}
+
+.section6 {
+  background: #feb5001a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section6 #segunMateria {
+  display: none;
+}
+.section6 h4 {
+  color: #FEB500;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
+  padding-top: 3vh;
+  padding-bottom: 2.5vh;
+  text-align: center;
+}
+.section6 #materia {
+  width: auto;
+  font-size: 1.5em;
+}
+
+.modalContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modalContainer .confirmar {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modalContainer .modal-content {
+  background-color: #e7e0ce;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid lightgray;
+  width: 60%;
+}
+
+.modalContainer .confirmar:hover,
+.modalContainer .confirmar:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .footer {
@@ -432,4 +487,8 @@ h3 {
 
 .suscripcion {
   padding-top: 5%;
+}
+
+#segunMateria {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

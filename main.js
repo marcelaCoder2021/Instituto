@@ -54,25 +54,39 @@ class Profesor {
         this.descripcion = descripcion;
     }
 }
-function listadoAlumnos (){
-    let nombre = prompt ("¿Cómo te llamás?");
-    let padres = prompt("¿Cómo se llaman tus padres?");
-    let edad = parseInt( prompt("¿Cuántos años tenés?"));
-    let nombreEscuela = prompt ("¿A qué escuela vas?");
-    let anioEscolar =parseInt(prompt("¿En qué grado estás?"));
-    let materia = prompt ("¿En qué materia necesitas apoyo?");
-    const alumno = new Alumnos (nombre, padres, edad, nombreEscuela, anioEscolar, materia);
-    console.log (alumno);
-    return alumno;
-}
-listadoAlumnos ();
 
-const arrayAlumnos = [];
-    arrayAlumnos.push (new Alumnos (this.nombre, this.padres, this.edad, this.nombreEscuela, this.anioEscolar, this.materia));
-    console.log (arrayAlumnos);
+
 
 */
-
+//ocultoOpcionSelect
+//modal inicio sesión
+if(document.getElementById("btnModal")){
+    let modal = document.getElementById("myModal");
+    let btn = document.getElementById("btnModal");
+    let span = document.getElementsByClassName("confirmar")[0];
+    let body = document.getElementsByTagName("body")[0];
+    btn.onclick = function() {
+        modal.style.display = "block";
+        body.style.position = "static";
+        body.style.height = "100%";
+        body.style.overflow = "hidden";
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
+        body.style.position = "inherit";
+        body.style.height = "auto";
+        body.style.overflow = "visible";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            body.style.position = "inherit";
+            body.style.height = "auto";
+            body.style.overflow = "visible";
+        }
+    }
+}
+/////////////////////////////////////////
 
 //formulario de inscripcion
 //variables formulario
@@ -124,52 +138,53 @@ const checkUsuario = ()=> {
     return valido;
     }
 }
-nombre.onchange = () => { //evento si ingresa nombre activa el checkusuario
-    checkUsuario();
-    localStorage.setItem("Nombre alumno", nombre.value); //guardo en el localStorage el nombre del alumno
-}
-
+//muestro opciones de profesores segun la materia
+    $(document).ready(function(){
+        $("#materia").click(function(){
+          $("#segunMateria").show();
+        });
+      });
 //eleccion de materias
-const materiaElegida = () => { //para que aparezcan las opciones de profesores según la materia elegida
+function materiaElegida() {
     const opcionMateria = materia.value;
     const divGlobal = document.querySelector("#segunMateria").querySelectorAll(".datos");
     switch (opcionMateria) {
-        case '0':
+        case '#':
             divGlobal.forEach(elemento => {
                 elemento.style.display = "none";
-        })
+            });
             elegi.style.display = "none";
             break;
         case '1':
             divGlobal.forEach(elemento => {
                 elemento.style.display = "none";
-        })
+            });
             profesorMatematica.style.display = "block";
             break;
         case '2':
             divGlobal.forEach(elemento => {
                 elemento.style.display = "none";
-        })
+            });
             profesorLengua.style.display = "block";
             break;
         case '3':
             divGlobal.forEach(elemento => {
                 elemento.style.display = "none";
-        })
+            });
             profesorHistoria.style.display = "block";
             break;
         case '4':
             divGlobal.forEach(elemento => {
                 elemento.style.display = "none";
-        })
-            profesorGeografia.style.display = "block"; 
+            });
+            profesorGeografia.style.display = "block";
             break;
         case '5':
             divGlobal.forEach(elemento => {
                 elemento.style.display = "none";
-        })
+            });
             profesorIngreso.style.display = "block";
-            break;  
+            break;
     }
 }
 materia.onchange = ()=> {  //evento onchage
@@ -195,11 +210,7 @@ const checkEmail = () => {
     }
     return valido;
 }
-email.onchange = ()=> { //evento cuando cambia el campo email, chequea que sea valido
-    checkEmail();
-    localStorage.setItem("Email", email.value); //guardo en localStorage
-}
- 
+
 /********************************************/
 /**************profesores********/
 class Profesores {
@@ -223,11 +234,6 @@ let cardProfesores = function () {
     return this.imagen + ""+ this.nombre +""+ this.materia + ""+ this.introduccion;
  alert (Profesores.cardProfesores);
 }
-
-
-
-
-
 let arrayProfesores = [
     {profesor: "Gastón", materia: "Matemática", introduccion:"Dinámico y entretenido, logra que la matemática se\
      convierta en un juego en el que todos los chicos quieren participar."},
@@ -238,3 +244,5 @@ let arrayProfesores = [
     {profesor: "Stephi", materia: "Geografía", introduccion:"Un viaje a través de los países, su clima, su división\
      política, su topografía, y mucho más."},
 ];
+
+
