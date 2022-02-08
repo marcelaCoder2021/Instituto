@@ -192,40 +192,70 @@
                     <h2>En qué materia necesitás apoyo?</h2>
                     <select id="materia" placeholder="Elegí la materia"> <!--drop down eleccion materias-->
                         <option value="#" id="elegi">Elegí la materia</option>
-                        <option value="1" id="matematica">Matemática</option>
-                        <option value="2" id="lengua">Lengua</option>
-                        <option value="3" id="historia">Historia</option>
-                        <option value="4" id="geografia">Geografía</option>
-                        <option value="5" id="ingreso">Ingreso secundario</option>
+                        <option value="Matemática" id="matematica">Matemática</option>
+                        <option value="Lengua" id="lengua">Lengua</option>
+                        <option value="Historia" id="historia">Historia</option>
+                        <option value="Geografía" id="geografia">Geografía</option>
+                        <option value="Ingreso" id="ingreso">Ingreso secundario</option>
                     </select>
                 </div> 
                 <div id="segunMateria">  <!-- de acuerdo a la materia elegida -->
                     <div id="elegi"></div>
-                    <div class="datos"  class="profesoresHide" id="profesorMatematica">
-                        <select  >  <!--drop down eleccion profesor-->
-                            <option value="gu">Guido</option>
-                            <option value="ni">Nicole</option>
+                    <div class="datosProfesores"  class="profesoresHide" id="profesorMatematica">
+                        <select id="profeElegido" >  <!--drop down eleccion profesor-->
+                            <option>Elegí tu profe</option>
+                            <option value="Guido">Guido</option>
+                            <option value="Nicole">Nicole</option>
                         </select>
                     </div>
                     <div class="datosProfesores" class="profesoresHide" id="profesorLengua">
                         <select  ><!--drop down eleccion profesor-->
-                            <option value="lu">Lucas</option>
-                            <option value="st">Stefi</option>
+                            <option>Elegí tu profe</option>
+                            <option value="Lucas">Lucas</option>
+                            <option value="Stephi">Stefi</option>
                         </select>
                     </div>
                     <div class="datosProfesores" class="profesoresHide" id="profesorHistoria">
-                        <button>Gastón</button>
+                        <select>
+                            <option>Elegí tu profe</option>
+                            <option value="Gastón" >Gastón</option>
+                    </select>
                     </div>
                     <div class="datosProfesores" class="profesoresHide" id="profesorGeografia">
-                        <button>Luciana</button>
+                        <select>
+                            <option>Elegí tu profe</option>
+                            <option value="Luciana">Luciana</option>
+                    </select>
                     </div>
                     <div class="datosProfesores"class="profesoresHide" id="profesorIngreso">
                         <select><!--drop down eleccion profesor-->
-                        <option value="ta">Tatu</option>
-                        <option value="me">Melu</option>
-                        <option value="ja">Javi</option>
-                        <option value="sh">Shirly</option>
-                    </select>
+                            <option>Elegí tu profe</option>   
+                            <option value="Tatu">Tatu</option>
+                            <option value="Melu">Melu</option>
+                            <option value="Javi">Javi</option>
+                            <option value="Shirly">Shirly</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="horario">
+                            <option>Elegí el día y la hora</option><!--drop down día-->
+                            <option>Lunes 16:00 a 16:45</option>
+                            <option>Lunes 17:00 a 17:45</option>
+                            <option>Lunes 18:00 a 18:45</option>
+                            <option>Lunes 19:00 a 19:45</option>                      
+                            <option>Miércoles 10:00 a 10:45</option>
+                            <option>Miércoles 11:00 a 11:45</option>
+                            <option>Miércoles 12:00 a 12:45</option>
+                            <option>Miércoles 13:00 a 13:45</option>
+                            <option>Miércoles 16:00 a 16:45</option>
+                            <option>Miércoles 17:00 a 17:45</option>
+                            <option>Miércoles 18:00 a 18:45</option>
+                            <option>Miércoles 19:00 a 19:45</option>
+                            <option>Viernes 10:00 a 10:45</option>
+                            <option>Viernes 11:00 a 11:45</option>
+                            <option>Viernes 12:00 a 12:45</option>
+                            <option>Viernes 13:00 a 13:45</option>
+                        </select>
                     </div>
                 </div>
                 <div class="submit">

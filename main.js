@@ -30,35 +30,7 @@ let animateButton = function(e) {
     bubblyButtons[i].addEventListener('mouseenter', animateButton, false);
   };
 //fin animacion botn inscribite ahora
-/**************************************************************************************************/
-//animacion cardProfesores
-
-
-
-
-
-
-
-
-
-
-
-/******************************************************************************************************/ 
-//cardProfes
-/*const profesores = document.querySelector (".cardProfes");
-class Profesor {
-    constructor(imagen, nombre, materia, descripcion) {
-        this.imagen= imagen;
-        this.nombre = nombre;
-        this.materia = materia;
-        this.descripcion = descripcion;
-    }
-}
-
-
-
-*/
-//ocultoOpcionSelect
+/************************************************************************************************************/
 //modal inicio sesión
 if(document.getElementById("btnModal")){
     let modal = document.getElementById("myModal");
@@ -86,8 +58,7 @@ if(document.getElementById("btnModal")){
         }
     }
 }
-/////////////////////////////////////////
-
+/***********************************************************************************************************/
 //formulario de inscripcion
 //variables formulario
 const nombre = document.querySelector("#nombre");
@@ -138,60 +109,6 @@ const checkUsuario = ()=> {
     return valido;
     }
 }
-//muestro opciones de profesores segun la materia
-    $(document).ready(function(){
-        $("#materia").click(function(){
-          $("#segunMateria").show();
-        });
-      });
-//eleccion de materias
-function materiaElegida() {
-    const opcionMateria = materia.value;
-    const divGlobal = document.querySelector("#segunMateria").querySelectorAll(".datos");
-    switch (opcionMateria) {
-        case '#':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            elegi.style.display = "none";
-            break;
-        case '1':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            profesorMatematica.style.display = "block";
-            break;
-        case '2':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            profesorLengua.style.display = "block";
-            break;
-        case '3':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            profesorHistoria.style.display = "block";
-            break;
-        case '4':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            profesorGeografia.style.display = "block";
-            break;
-        case '5':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            profesorIngreso.style.display = "block";
-            break;
-    }
-}
-materia.onchange = ()=> {  //evento onchage
-    materiaElegida();
-    localStorage.setItem("Materia", materia.value); //guardo en localStorage la materia seleccionada
-}
-
 //validacion email
 const isEmailValid = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -210,8 +127,62 @@ const checkEmail = () => {
     }
     return valido;
 }
+/*************************************************************************************************************/
+//muestro opciones de profesores según la materia
+    $(document).ready(function(){
+        $("#materia").click(function(){
+          $("#segunMateria").show();
+        });
+      });
+//eleccion de materias
+function materiaElegida() {
+    const opcionMateria = materia.value;
+    const divGlobal = document.querySelector("#segunMateria").querySelectorAll(".datosProfesores");
+    switch (opcionMateria) {
+        //case '#':
+            //divGlobal.forEach(elemento => {
+                //elemento.style.display = "none";
+           // });
+            //elegi.style.display = "none";
+            //break;
+        case 'Matemática':
+            divGlobal.forEach(elemento => {
+                elemento.style.display = "none";
+            });
+            profesorMatematica.style.display = "block";
+            break;
+        case 'Lengua':
+            divGlobal.forEach(elemento => {
+                elemento.style.display = "none";
+            });
+            profesorLengua.style.display = "block";
+            break;
+        case 'Historia':
+            divGlobal.forEach(elemento => {
+                elemento.style.display = "none";
+            });
+            profesorHistoria.style.display = "block";
+            break;
+        case 'Geografía':
+            divGlobal.forEach(elemento => {
+                elemento.style.display = "none";
+            });
+            profesorGeografia.style.display = "block";
+            break;
+        case 'Ingreso':
+            divGlobal.forEach(elemento => {
+                elemento.style.display = "none";
+            });
+            profesorIngreso.style.display = "block";
+            break;
+    }
+}
+materia.onchange = ()=> {  //evento onchage
+    materiaElegida();
+    localStorage.setItem("Materia", materia.value); //guardo en localStorage la materia seleccionada
+}
 
-/********************************************/
+
 /**************profesores********/
 class Profesores {
     constructor(imagen, nombre, materia, introduccion) {
