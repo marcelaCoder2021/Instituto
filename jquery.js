@@ -16,6 +16,54 @@ $(()=>{  //funcion ready
   });   
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//muestro opciones de profesores según la materia
+$(()=>{ 
+  $("#materia").on("click",function(){
+    $("#segunMateria").show();
+  });
+});
+//eleccion de materias
+function materiaElegida() {
+const opcionMateria = materia.value;
+const divGlobal = document.querySelector("#segunMateria").querySelectorAll(".datosProfesores");
+switch (opcionMateria) {
+  case 'Matemática':
+      divGlobal.forEach(elemento => {
+          elemento.style.display = "none";
+      });
+      profesorMatematica.style.display = "block";
+      break;
+  case 'Lengua':
+      divGlobal.forEach(elemento => {
+          elemento.style.display = "none";
+      });
+      profesorLengua.style.display = "block";
+      break;
+  case 'Historia':
+      divGlobal.forEach(elemento => {
+          elemento.style.display = "none";
+      });
+      profesorHistoria.style.display = "block";
+      break;
+  case 'Geografía':
+      divGlobal.forEach(elemento => {
+          elemento.style.display = "none";
+      });
+      profesorGeografia.style.display = "block";
+      break;
+  case 'Ingreso':
+      divGlobal.forEach(elemento => {
+          elemento.style.display = "none";
+      });
+      profesorIngreso.style.display = "block";
+      break;
+}
+}
+materia.onchange = ()=> {  //evento onchage
+materiaElegida();
+localStorage.setItem("Materia", materia.value); //guardo en localStorage la materia seleccionada
+}
+////////////////////////////////////////////////////
 //Obtengo, almaceno, borro, recupero del localStoge y uso los datos ingresados en inputs
 $(()=>{     
   $('#submit').on("click",function(){        
@@ -23,8 +71,8 @@ $(()=>{
     let nom = document.getElementById("nombre").value;
     let mail = document.getElementById("email").value;
     //Guardo los datos en el LocalStorage
-    localStorage.setItem("nombre", nom);
-    localStorage.setItem("email", mail);
+    localStorage.setItem("nombre",JSON.stringify(nom));
+    localStorage.setItem("email", JSON.stringify(mail));
     //Borro los inputs
     document.getElementById("nombre").value = "";
     document.getElementById("email").value = "";
@@ -54,25 +102,23 @@ $(()=>{
 $(()=>{     
   $('#btn').on("click",function(){        
     //Capturo de datos de los inputs inputs      
-    let matElegida = document.getElementById("materia").value;//ok
-    let profeElegido = document.getElementById("profeElegido").value;
-    let horarioElegido = document.getElementById("horario").value;
+    //let matElegida = document.getElementById("materia").value;//ok
+    let profeElegido = document.getElementById("profe").value;
+    let horarioElegido = document.getElementById("horario").value;//ok
     //Guardo los datos en el LocalStorage
-    localStorage.setItem("Materia", matElegida);
-    localStorage.setItem("Profe", profeElegido);
-    localStorage.setItem("Horario", horarioElegido);
+    //localStorage.setItem("Materia", matElegida);
+    localStorage.setItem("Profesor",JSON.stringify( profeElegido));
+    localStorage.setItem("Horario", JSON.stringify(horarioElegido));
     //Obtengo datos guardados en localStorage*/
     let matElegidaStorage = localStorage.getItem("materia");
-    let profeElegidoStorage = localStorage.getItem("profeElegido");
-    let horarioElegidoStorage=localStorage.getItem("horario")
+    let profeElegidoStorage = localStorage.getItem("profe");
+    let horarioElegidoStorage=localStorage.getItem("horario");//let nombre = localStorage.getItem("nombre");
     //Muestro datos almacenados con Alert
-    document.getElementById("materia").innerHTML = matElegidaStorage;
-    document.getElementById("profeElegido").innerHTML = profeElegidoStorage; 
-    document.getElementById("horario").innerHTML = horarioElegidoStorage; 
-    
+    document.getElementById("materia").innerHTML = matElegidaStorage;//document.getElementById("email").innerHTML = email; 
+    //alert ("Bienvenida/o " + nombre)
+    document.getElementById("profe").innerHTML = profeElegidoStorage; 
+    document.getElementById("horario").innerHTML = horarioElegidoStorage;
   });
-  alert ("Hola " + nombre+
-            "elegiste: materia " + matElegidaStorage+
-            "con " +profeElegidoStorage +
-            "el " +horarioElegidoStorage )
 });
+
+

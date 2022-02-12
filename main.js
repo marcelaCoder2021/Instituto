@@ -65,6 +65,7 @@ const nombre = document.querySelector("#nombre");
 const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
 const materia = document.querySelector("#materia");
+const profe = document.querySelector("#profe");
 const matematica = document.querySelector("#matematica");
 const lengua = document.querySelector("#lengua");
 const historia = document.querySelector("#historia");
@@ -128,92 +129,13 @@ const checkEmail = () => {
     return valido;
 }
 /*************************************************************************************************************/
-//muestro opciones de profesores según la materia
-    $(document).ready(function(){
-        $("#materia").click(function(){
-          $("#segunMateria").show();
-        });
-      });
-//eleccion de materias
-function materiaElegida() {
-    const opcionMateria = materia.value;
-    const divGlobal = document.querySelector("#segunMateria").querySelectorAll(".datosProfesores");
-    switch (opcionMateria) {
-        //case '#':
-            //divGlobal.forEach(elemento => {
-                //elemento.style.display = "none";
-           // });
-            //elegi.style.display = "none";
-            //break;
-        case 'Matemática':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            profesorMatematica.style.display = "block";
-            break;
-        case 'Lengua':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            profesorLengua.style.display = "block";
-            break;
-        case 'Historia':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            profesorHistoria.style.display = "block";
-            break;
-        case 'Geografía':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            profesorGeografia.style.display = "block";
-            break;
-        case 'Ingreso':
-            divGlobal.forEach(elemento => {
-                elemento.style.display = "none";
-            });
-            profesorIngreso.style.display = "block";
-            break;
-    }
+
+//simil carrito de compras
+
+const claseAgendada = {
+    Materia: materia.value,
+    Horario: horario.value,
+    Profesor: profe.value
 }
-materia.onchange = ()=> {  //evento onchage
-    materiaElegida();
-    localStorage.setItem("Materia", materia.value); //guardo en localStorage la materia seleccionada
-}
-
-
-/**************profesores********/
-class Profesores {
-    constructor(imagen, nombre, materia, introduccion) {
-        this.imagen= imagen;
-        this.nombre = nombre;
-        this.materia = materia;
-        this.introduccion = introduccion;
-    }
-}
-let Mati = new Profesores ("Mati", "Historia","Adorado por todos los chicos, la historia enseñada por él\
-    es como un cuento lleno de aventuras.");  
-let Gastón = new Profesores ("Gastón", "Matemática","Dinámico y entretenido, logra que la matemática se\
-    convierta en un juego en el que todos los chicos quieren participar.");
-let Nicole = new Profesores ("Nicole", "Lengua","Gracias a ella, los verbos dejaron de ser un problema y\
-    los errores ortográficos quedaron en el pasado.");
-let Stephi = new Profesores ("Stephi", "Geografía", "Un viaje a través de los países, su clima, su división\
-    política, su topografía, y mucho más.");
-
-let cardProfesores = function () {
-    return this.imagen + ""+ this.nombre +""+ this.materia + ""+ this.introduccion;
- alert (Profesores.cardProfesores);
-}
-let arrayProfesores = [
-    {profesor: "Gastón", materia: "Matemática", introduccion:"Dinámico y entretenido, logra que la matemática se\
-     convierta en un juego en el que todos los chicos quieren participar."},
-    {profesor: "Nicole", materia: "Lengua", introduccion:"Gracias a ella, los verbos dejaron de ser un problema y\
-     los errores ortográficos quedaron en el pasado."},
-    {profesor: "Mati", materia: "Historia", introduccion:"Adorado por todos los chicos, la historia enseñada por él\
-     es como un cuento lleno de aventuras."},
-    {profesor: "Stephi", materia: "Geografía", introduccion:"Un viaje a través de los países, su clima, su división\
-     política, su topografía, y mucho más."},
-];
-
-
+const enJson = JSON.stringify (claseAgendada);
+console.log (enJson);

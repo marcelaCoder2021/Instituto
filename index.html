@@ -191,7 +191,7 @@
                 <div class="datosMaterias"> 
                     <h2>En qué materia necesitás apoyo?</h2>
                     <select id="materia" placeholder="Elegí la materia"> <!--drop down eleccion materias-->
-                        <option value="#" id="elegi">Elegí la materia</option>
+                        <option value="" id="elegi">Elegí la materia</option>
                         <option value="Matemática" id="matematica">Matemática</option>
                         <option value="Lengua" id="lengua">Lengua</option>
                         <option value="Historia" id="historia">Historia</option>
@@ -200,35 +200,34 @@
                     </select>
                 </div> 
                 <div id="segunMateria">  <!-- de acuerdo a la materia elegida -->
-                    <div id="elegi"></div>
                     <div class="datosProfesores"  class="profesoresHide" id="profesorMatematica">
-                        <select id="profeElegido" >  <!--drop down eleccion profesor-->
-                            <option>Elegí tu profe</option>
+                        <select id="profe" placeholder="Elegí tu profe">  <!--drop down eleccion profesor-->
+                            <option>Elegí tu profe</option>  
                             <option value="Guido">Guido</option>
                             <option value="Nicole">Nicole</option>
                         </select>
                     </div>
                     <div class="datosProfesores" class="profesoresHide" id="profesorLengua">
-                        <select  ><!--drop down eleccion profesor-->
-                            <option>Elegí tu profe</option>
+                        <select id="profe" placeholder="Elegí tu profe"><!--drop down eleccion profesor-->
+                            <option>Elegí tu profe</option> 
                             <option value="Lucas">Lucas</option>
                             <option value="Stephi">Stefi</option>
                         </select>
                     </div>
                     <div class="datosProfesores" class="profesoresHide" id="profesorHistoria">
-                        <select>
-                            <option>Elegí tu profe</option>
+                        <select id="profe" placeholder="Elegí tu profe"><!--drop down eleccion profesor-->
+                            <option>Elegí tu profe</option>  
                             <option value="Gastón" >Gastón</option>
                     </select>
                     </div>
                     <div class="datosProfesores" class="profesoresHide" id="profesorGeografia">
-                        <select>
-                            <option>Elegí tu profe</option>
+                        <select id="profe" placeholder="Elegí tu profe"><!--drop down eleccion profesor-->
+                            <option>Elegí tu profe</option>  
                             <option value="Luciana">Luciana</option>
                     </select>
                     </div>
                     <div class="datosProfesores"class="profesoresHide" id="profesorIngreso">
-                        <select><!--drop down eleccion profesor-->
+                        <select id="profe" placeholder="Elegí tu profe"><!--drop down eleccion profesor-->
                             <option>Elegí tu profe</option>   
                             <option value="Tatu">Tatu</option>
                             <option value="Melu">Melu</option>
@@ -258,9 +257,29 @@
                         </select>
                     </div>
                 </div>
-                <div class="submit">
-                    <button type="submit" id="btn">Enviar</button>
-                </div>    
+               <!-- <div class="submit">-->
+                    <!--<button type="submit" id="btn">Enviar</button>-->
+                        <button id="btn" id="btnModal" class="btnInscripcion">Login</button><!--modal inicio sesión-->
+                        <a href="openModal"></a>
+                            <div id="openModal" class="modalDialog">   
+                                <div id="myModal" class="modalContainer">
+                                    <div class="modal-content">
+                                        <h2>Iniciar sesión</h2> 
+                                        <div class="datos">
+                                            <h4>Ingresá tu nombre</h4>
+                                            <input type="text" id="nombre" placeholder="Ingresá tu nombre">
+                                            <small></small><!--para mandar mensaje de error-->
+                                        </div>
+                                        <div class="datos">
+                                            <h4>Ingresá tu email</h4>
+                                            <input type="email" id="email" placeholder="Ingresá tu email">
+                                            <small></small><!--para mandar mensaje de error-->
+                                        </div>
+                                        <span class="confirmar" id="submit">Confirmar</span> 
+                                    </div>
+                                </div>
+                            </div>        
+                  
             </form>
         </div>
     </section>
